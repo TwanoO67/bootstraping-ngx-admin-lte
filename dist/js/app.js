@@ -315,7 +315,7 @@ function _init() {
       var screenSizes = $.AdminLTE.options.screenSizes;
 
       //Enable sidebar toggle
-      $(toggleBtn).on('click', function (e) {
+      $(document).delegate(toggleBtn, 'click', function (e) {
         e.preventDefault();
 
         //Enable sidebar push menu
@@ -449,10 +449,10 @@ function _init() {
       //Get the sidebar
       var sidebar = $(o.selector);
       //The toggle button
-      var btn = $(o.toggleBtnSelector);
+      //var btn = $(o.toggleBtnSelector);
 
       //Listen to the click event
-      btn.on('click', function (e) {
+      $(document).delegate(o.toggleBtnSelector,'click', function (e) {
         e.preventDefault();
         //If the sidebar is not open
         if (!sidebar.hasClass('control-sidebar-open')
