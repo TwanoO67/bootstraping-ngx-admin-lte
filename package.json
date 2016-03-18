@@ -1,0 +1,38 @@
+{
+  "name": "ng2-admin-lte",
+  "version": "1.0.0",
+  "description": "boostraping angular2 avec theme AdminLTE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"tsc -w\" \"lite-server\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwanoO67/ng2-admin-lte.git"
+  },
+  "keywords": [
+    "angular2",
+    "adminLTE"
+  ],
+  "author": "Antoine WEBER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TwanoO67/ng2-admin-lte/issues"
+  },
+  "homepage": "https://github.com/TwanoO67/ng2-admin-lte#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-beta.10",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.33.3",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "^5.0.0-beta.2",
+    "systemjs": "^0.19.24",
+    "zone.js": "^0.6.4"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
+  }
+}
