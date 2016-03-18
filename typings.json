@@ -1,0 +1,6 @@
+{
+  "ambientDependencies": {
+    "promise": "registry:dt/promise#7.1.1+20160316171810",
+    "require": "registry:dt/require#2.1.20+20160316155526"
+  }
+}

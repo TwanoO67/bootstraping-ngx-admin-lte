@@ -1,11 +1,12 @@
 import {Component} from 'angular2/core';
 @Component({
   // Declare the tag name in index.html to where the component attaches
-  selector: 'hello-world',
+  selector: 'app-header',
+  inputs: ['user'],
   // Location of the template for this component
-  templateUrl: 'app/hello_world.html'
+  templateUrl: 'app/_widgets//header.html'
 })
-export class HelloWorld {
+export class Header {
   // Declaring the variable for binding with initial value
   yourName: string = '';
 }
