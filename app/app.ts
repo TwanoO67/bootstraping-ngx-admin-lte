@@ -63,7 +63,7 @@ export class App {
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
   user = {
-    "avatar": "assets/admin-lte/img/user2-160x160.jpg",
+    "avatar": "assets/img/user2-160x160.jpg",
     "name": "Alexander Pierce",
     "state": "Online",
     "class": "text-success"
