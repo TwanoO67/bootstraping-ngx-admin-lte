@@ -42,6 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="/node_modules/angular2/bundles/http.dev.js"></script>
     <script src="/node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
     <!--old-->
     <!--script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
@@ -59,9 +60,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             format: "register",
             defaultExtension: 'js'
           }
+        },
+        /*defaultJSExtensions: true,*/
+        map: {
+          'firebase-angular2': 'dist/node_modules/firebase-angular2'
         }
       });
-      System.import('dist/main')
+      System.import('dist/app/main')
             .then(null, console.error.bind(console));
     </script>
   </head>
