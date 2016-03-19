@@ -11,6 +11,9 @@ import {FirebaseService, FirebaseArray} from 'firebase-angular2/core';
 export class HelloWorld {
   // Declaring the variable for binding with initial value
   private yourName: string = '';
+  private email: string = '';
+  private pwd: string = '';
+  private login_error: string = '';
 
   private firebaseService: FirebaseService;
 
@@ -24,8 +27,24 @@ export class HelloWorld {
     };
 
   public save(){
-    return this.firebaseService.child('users').asArray().add({
+    return this.firebaseService.child('data').asArray().add({
       name: this.yourName
+    });
+  }
+
+  public connect(){
+    let base = new Firebase('https://luminous-heat-6510.firebaseio.com/');//this.firebaseService.firebase();
+
+    base.authWithPassword({
+      email    : this.email,
+      password : this.pwd
+    },(error, authData)=>{
+      if (error) {
+        console.log("Login Failed!", error);
+        this.login_error = error;
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
     });
   }
 

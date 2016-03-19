@@ -1,7 +1,14 @@
-<label>Name:</label>
-<!-- data-bind to the input element; store value in yourName -->
-<input type="text" [(ngModel)]="yourName" placeholder="Enter a name here">
+
+<h2>Connexion</h2>
+
+<label>Email:</label>
+<input type="text" [(ngModel)]="email" placeholder="Votre adresse email">
+<br/>
+<label>Mot de passe:</label>
+<input type="password" [(ngModel)]="pwd" placeholder="Votre mot de passe">
+<br/>
+<input type='button' (click)="connect()" value="Connexion" />
+<br/>
+{{login_error}}
 <hr>
-<!-- conditionally display `yourName` -->
-<h1 [hidden]="!yourName">Hello {{yourName}}!</h1>
-<input type='button' (click)="save()" value="FireSend!" />
+<h1 [hidden]="!email">Hello {{email}}!</h1>
