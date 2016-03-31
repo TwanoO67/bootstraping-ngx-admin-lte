@@ -8,4 +8,8 @@ AlertComponent
 ```
 <alert title="title" text="title" type="info" icon="ban" (close)="onCloseAlert()"></alert>
 ```
+Box
 
+```
+<box title="My title" type="warning" icon="ban">Custom content</box>
+```
