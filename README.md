@@ -1,6 +1,15 @@
 # ng2-admin-lte
 Bootstraping of Angular2 with AdminLTE dashboard template
 
+![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
+
+## Installation
+
+```
+npm install
+npm start
+```
+
 ## Components
 
 AlertComponent
