@@ -2,7 +2,13 @@
 import {User} from "../_models/user";
 import {Message} from "../_models/message";
 import {Injectable, bind} from 'angular2/core';
-import {Subject, Observable} from 'rxjs';
+
+import {Observable} from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject';
+import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/startWith';
+
+//import {Subject, Observable} from 'rxjs';
 
 let initialMessages: Message[] = [];
 
@@ -70,6 +76,7 @@ export class MessagesService {
   // an imperative function call to this action stream
   addMessage(message: Message): void {
     this.newMessages.next(message);
+    console.log(message.title);
   }
 
 }
