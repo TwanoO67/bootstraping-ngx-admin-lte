@@ -1,26 +1,28 @@
 import {Component,HostBinding} from 'angular2/core';
-import {Message} from "../../_models/message";
-import {MessagesService} from "../../_services/messages_service.ts"
-//import {MessagesService } from "../../_services/messages_service";
+import {User} from "../../_models/user";
+import {UserService} from "../../_services/user_service";
 
 @Component({
   // Declare the tag name in index.html to where the component attaches
   selector: '.userBox',
-  inputs: ['user'],
   // Location of the template for this component
   templateUrl: 'app/_widgets/user_box/user_box.html'
 })
 export class UserBox {
-  // Declaring the variable for binding with initial value
-  messages: Message[];
+  current_user: User;
 
-  /*constructor( private _msg_serv:MessagesService ){
+  constructor( private _user_serv : UserService ){
+    this.current_user = new User();
 
+    //se connecter au modif du user courant
+    this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
   }
 
-  public NgOnInit(){
-    this._msg_serv.messages.subscribe((msg: Message[])=>{
-      this.messages = msg;
-    })
-  }*/
+  public ngOnInit(){
+    //reception des données par les services
+    /*this._user_serv.current_user.subscribe((user: User)=>{
+      this.current_user = user;
+    });*/
+  }
+
 }

@@ -1,17 +1,17 @@
 <!-- Menu Toggle Button -->
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
   <!-- The user image in the navbar-->
-  <img [src]="user.avatar" class="user-image" [alt]="user.name">
+  <img [src]="current_user.avatar_url" class="user-image" [alt]="current_user.getName()">
   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-  <span class="hidden-xs">{{user.name}}</span>
+  <span class="hidden-xs">{{current_user.getName()}}</span>
 </a>
 <ul class="dropdown-menu">
   <!-- The user image in the menu -->
   <li class="user-header">
-    <img [src]="user.avatar" class="img-circle" [alt]="user.name">
+    <img [src]="current_user.avatar_url" class="img-circle" [alt]="current_user.getName()">
     <p>
-      {{user.name}} - Web Developer
-      <small>Member since Nov. 2012</small>
+      {{current_user.getName()}} - Web Developer
+      <small>Member since {{current_user.creation_date}}</small>
     </p>
   </li>
   <!-- Menu Body -->

@@ -34,6 +34,7 @@ export class MessagesService {
   markThreadAsRead: Subject<any> = new Subject<any>();
 
   constructor() {
+    console.log('construc serv message');
     this.messages = this.updates
       // watch the updates and accumulate operations on the messages
       .scan((messages: Message[],
@@ -75,8 +76,8 @@ export class MessagesService {
 
   // an imperative function call to this action stream
   addMessage(message: Message): void {
+    console.log("ajout d'un message");
     this.newMessages.next(message);
-    console.log(message.title);
   }
 
 }

@@ -1,19 +1,26 @@
 import {Component, Inject} from 'angular2/core';
 import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
+import {User} from "../_models/user";
+import {UserService} from "../_services/user_service";
+
 @Component({
   // Declare the tag name in index.html to where the component attaches
   selector: 'menu-aside',
-  inputs: ['user'],
   directives: [ ...ROUTER_DIRECTIVES],
   // Location of the template for this component
   templateUrl: 'app/_widgets/menu-aside.html'
 })
 export class MenuAside {
+  current_user: User;
 
-  constructor(
-    public router: Router){
+  constructor( private _user_serv : UserService, public router: Router ){
+    this.current_user = new User();
 
-    }
+    //se connecter au modif du user courant
+    this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
+
+  }
+
 
   links: Array<any> = [
     {
@@ -37,6 +44,6 @@ export class MenuAside {
   ];
 
   ngOnInit(){
-    console.log(this.links);
+    //console.log(this.links);
   }
 }

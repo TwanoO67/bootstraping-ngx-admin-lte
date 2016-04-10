@@ -9,6 +9,10 @@ import {HelloWorld} from './hello_world/hello_world';
 import {HelloWorld2} from './hello_world2/hello_world2';
 import {Header} from './_widgets/header';
 import {MenuAside} from './_widgets/menu-aside';
+import {User} from "./_models/user";
+import {UserService} from "./_services/user_service";
+import {Message} from './_models/message';
+import {MessagesService} from "./_services/messages_service";
 
 /*
  * App Component
@@ -16,13 +20,13 @@ import {MenuAside} from './_widgets/menu-aside';
  */
 @Component({
   selector: 'app',
-  providers: [ ...FORM_PROVIDERS ],
+  providers: [ ...FORM_PROVIDERS, MessagesService, UserService ],
   directives: [ ...ROUTER_DIRECTIVES, Header, MenuAside],
   pipes: [],
   template: `
-  <app-header [user]="user" >Chargement du header</app-header>
+  <app-header>Chargement du header</app-header>
 
-<menu-aside [user]="user" >Chargement du menu</menu-aside>
+<menu-aside>Chargement du menu</menu-aside>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -59,21 +63,67 @@ import {MenuAside} from './_widgets/menu-aside';
   { path: '/**', redirectTo: ['Index'] }
 ])
 export class App {
+
+  //données de config de la page
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
-  user = {
-    "avatar": "assets/img/user2-160x160.jpg",
-    "name": "Alexander Pierce",
-    "state": "Online",
-    "class": "text-success"
-  };
-}
+  current_user : User;
+  messages : Message[];
 
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */
+  constructor( private _msg_serv : MessagesService, private _user_serv : UserService ){
+
+  }
+
+  public ngOnInit(){
+    //reception des données par les services
+    this._user_serv.current_user.subscribe((user: User)=>{
+      this.current_user = user;
+    });
+    this._msg_serv.messages.subscribe((messages: Message[])=>{
+      this.messages = messages;
+    });
+
+
+    //insertion de donnée de démo, ici on pourrait appeler un service rest
+    let user_demo = new User();
+    user_demo.first_name = "Alexander";
+    user_demo.last_name = "Pierce";
+    user_demo.avatar_url = "assets/img/user1-128x128.jpg";
+    user_demo.email = 'test@adress.org' ;
+    user_demo.creation_date = "6 November 2012";
+
+    this._user_serv.setCurrentUser(user_demo);
+
+    let user_demo2 = new User();
+    user_demo2.first_name = "Tatiana";
+    user_demo2.last_name = "Grunder";
+    user_demo2.avatar_url = "assets/img/user2-160x160.jpg";
+    user_demo2.email = 'test2@adress.org' ;
+    user_demo2.creation_date = "7 November 2012";
+
+    //pour la demo on ajoute quelques messages
+    let myMsg = new Message();
+    myMsg.content = "Lorem ipsum dolor";
+    myMsg.title = "Why not buy a new awesome theme?";
+    myMsg.author = user_demo2;
+    myMsg.destination = user_demo;
+    this._msg_serv.addMessage(myMsg);
+
+    let myMsg2 = new Message();
+    myMsg2.content = "Lorem 2 ipsum dolor";
+    myMsg2.title = "Why not buy a new awesome theme?";
+    myMsg2.author = user_demo2;
+    myMsg2.destination = user_demo;
+    this._msg_serv.addMessage(myMsg2);
+
+    /*user = {
+      "avatar": "assets/img/user2-160x160.jpg",
+      "name": "Alexander Pierce",
+      "state": "Online",
+      "class": "text-success"
+    };*/
+
+  }
+
+}
