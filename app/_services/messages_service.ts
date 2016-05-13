@@ -1,7 +1,7 @@
 //based on https://github.com/ng-book/angular2-rxjs-chat/blob/master/app/ts/services/MessagesService.ts
 import {User} from "../_models/user";
 import {Message} from "../_models/message";
-import {Injectable, bind} from 'angular2/core';
+import {Injectable, bind} from '@angular/core';
 
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';

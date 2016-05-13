@@ -1,9 +1,9 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component} from 'angular2/core';
-import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
-import {FORM_PROVIDERS} from 'angular2/common';
+import {Component} from '@angular/core';
+import {RouteConfig, Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {FORM_PROVIDERS} from '@angular/common';
 import {Home} from './home/home';
 import {HelloWorld} from './hello_world/hello_world';
 import {HelloWorld2} from './hello_world2/hello_world2';

@@ -31,7 +31,7 @@
     <ul class="sidebar-menu">
       <li class="header">NAVIGATION</li>
 
-      <template ngFor #item [ngForOf]="links" #i="index" >
+      <template *ngFor="let item of links; let i = index" >
         <template [ngIf]="!item.sublinks">
           <li [class.active]="router.isRouteActive(router.generate(item.link))" ><a [routerLink]="item.link">{{item.title}}</a></li>
         </template>
@@ -39,7 +39,7 @@
           <li class="treeview">
             <a href="#"><i class="fa fa-link"></i> <span>{{item.title}}</span> <i class="fa fa-angle-left pull-right"></i></a>
             <ul class="treeview-menu">
-              <template ngFor #subitem [ngForOf]="item.sublinks" #i="index" >
+              <template *ngFor="let subitem of item.sublinks; let i = index" >
               <li [class.active]="router.isRouteActive(router.generate(subitem.link))"><a [routerLink]="subitem.link">{{subitem.title}}</a></li>
               </template>
             </ul>

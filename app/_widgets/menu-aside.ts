@@ -1,5 +1,5 @@
-import {Component, Inject} from 'angular2/core';
-import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, Inject} from '@angular/core';
+import {RouteConfig, Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {User} from "../_models/user";
 import {UserService} from "../_services/user_service";
 

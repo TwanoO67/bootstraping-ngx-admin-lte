@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {MessagesBox} from "./messages_box/messages_box";
 import {NotificationsBox} from "./notifications_box/notifications_box";
 import {TasksBox} from "./tasks_box/tasks_box";
