@@ -1,4 +1,4 @@
-import {Component,HostBinding} from 'angular2/core';
+import {Component,HostBinding} from '@angular/core';
 import {Message} from "../../_models/message";
 import {MessagesService} from "../../_services/messages_service"
 //import {MessagesService } from "../../_services/messages_service";

@@ -1,4 +1,4 @@
-import {Component,HostBinding} from 'angular2/core';
+import {Component,HostBinding} from '@angular/core';
 import {User} from "../../_models/user";
 import {UserService} from "../../_services/user_service";
 

@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, Router, RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from '@angular/core';
+import {RouteConfig, Router, RouteParams, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 @Component({
   // Declare the tag name in index.html to where the component attaches

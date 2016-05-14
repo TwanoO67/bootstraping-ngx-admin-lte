@@ -1,5 +1,5 @@
-import { Component, Input, Output, OnInit, EventEmitter } from 'angular2/core';
-import { NgIf, NgClass } from 'angular2/common';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { NgIf, NgClass } from '@angular/common';
 
 @Component({
   selector: 'alert',
@@ -10,7 +10,7 @@ import { NgIf, NgClass } from 'angular2/common';
 })
 export class AlertComponent implements OnInit {
   public title: string;
-  public text: string; 
+  public text: string;
   public type: string;
   public icon: string;
   public close: EventEmitter = new EventEmitter();

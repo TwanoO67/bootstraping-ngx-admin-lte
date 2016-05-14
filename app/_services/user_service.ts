@@ -1,5 +1,5 @@
 import {User} from "../_models/user";
-import {Injectable, bind} from 'angular2/core';
+import {Injectable, bind} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
 import 'rxjs/add/operator/share';

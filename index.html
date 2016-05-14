@@ -33,33 +33,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
     <title>Angular 2 Hello World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- 1. Load libraries -->
-    <!-- IE required polyfills (from CDN), in this exact order -->
-    <script src="/node_modules/es6-shim/es6-shim.js"></script>
-    <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="/node_modules/systemjs/dist/system.src.js"></script>
-    <script src="/node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="/node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="/node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
 
     <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
     <script>
-      System.config({
-        packages: {
-          dist:{
-            format: "register",
-            defaultExtension: 'js'
-          }
-        },
-        /*defaultJSExtensions: true,*/
-        map: {
-          'firebase-angular2': 'dist/node_modules/firebase-angular2'
-        }
-      });
-      System.import('dist/app/main')
-            .then(null, console.error.bind(console));
+      System.import('app/main').catch(function(err){ console.error(err); });
     </script>
   </head>
   <!-- 3. Display the application -->
