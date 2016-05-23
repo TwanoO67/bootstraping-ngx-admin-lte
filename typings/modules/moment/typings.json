@@ -1,0 +1,11 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/typed-typings/npm-moment/a4075cd50e63efbedd850f654594f293ab81a385/typings.json",
+    "raw": "registry:npm/moment#2.10.5+20160211003958",
+    "main": "moment.d.ts",
+    "global": false,
+    "name": "moment",
+    "type": "typings"
+  }
+}

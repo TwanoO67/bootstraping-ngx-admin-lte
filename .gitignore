@@ -1,10 +1,9 @@
 node_modules
 dist
+index.html
 
 
 # Created by https://www.gitignore.io/api/atom,osx,windows,linux,netbeans,sublimetext,eclipse
-
-#!! ERROR: atom is undefined. Use list command to see defined gitignore types !!#
 
 ### OSX ###
 .DS_Store

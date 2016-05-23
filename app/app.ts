@@ -58,8 +58,6 @@ import {MessagesService} from "./_services/messages_service";
   {path:'/', component: HelloWorld, name: 'Index'},
   {path:'/hello', component: HelloWorld, name: 'HelloWorld'},
   {path:'/hello2', component: HelloWorld2, name: 'HelloWorld2'},
-  // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
-  { path: '/about', loader: () => require('es6-promise!./about/about')('About'), name: 'About' },
   { path: '/**', redirectTo: ['Index'] }
 ])
 export class App {

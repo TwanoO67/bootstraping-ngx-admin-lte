@@ -1,7 +1,19 @@
 {
-  "ambientDependencies": {
-    "firebase": "registry:dt/firebase#2.4.1+20160316155526",
-    "promise": "registry:dt/promise#7.1.1+20160316171810",
-    "require": "registry:dt/require#2.1.20+20160316155526"
+  "dependencies": {
+    "moment": "registry:npm/moment#2.10.5+20160211003958"
+  },
+  "devDependencies": {},
+  "globalDependencies": {
+    "zone.js": "github:gdi2290/typed-zone.js#66ea8a3451542bb7798369306840e46be1d6ec89",
+    "core-js": "registry:dt/core-js#0.0.0+20160317120654",
+    "es6-shim": "registry:dt/es6-shim#0.31.2+20160215162030",
+    "hammerjs": "github:DefinitelyTyped/DefinitelyTyped/hammerjs/hammerjs.d.ts#74a4dfc1bc2dfadec47b8aae953b28546cb9c6b7",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#4b36b94d5910aa8a4d20bdcd5bd1f9ae6ad18d3c",
+    "jquery": "registry:dt/jquery#1.10.0+20160316155526",
+    "jquery-knob": "registry:dt/jquery-knob#1.2.11+20160317120654",
+    "jqueryui": "registry:dt/jqueryui#1.9.0+20160317120654",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#8cf8164641be73e8f1e652c2a5b967c7210b6729",
+    "selenium-webdriver": "github:DefinitelyTyped/DefinitelyTyped/selenium-webdriver/selenium-webdriver.d.ts#a83677ed13add14c2ab06c7325d182d0ba2784ea",
+    "webpack": "github:DefinitelyTyped/DefinitelyTyped/webpack/webpack.d.ts#95c02169ba8fa58ac1092422efbd2e3174a206f4"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a83677ed13add14c2ab06c7325d182d0ba2784ea/selenium-webdriver/selenium-webdriver.d.ts",
+    "raw": "github:DefinitelyTyped/DefinitelyTyped/selenium-webdriver/selenium-webdriver.d.ts#a83677ed13add14c2ab06c7325d182d0ba2784ea",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a83677ed13add14c2ab06c7325d182d0ba2784ea/selenium-webdriver/selenium-webdriver.d.ts"
+  }
+}

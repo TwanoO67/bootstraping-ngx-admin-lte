@@ -1,0 +1,11 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/gdi2290/typed-zone.js/66ea8a3451542bb7798369306840e46be1d6ec89/typings.json",
+    "raw": "github:gdi2290/typed-zone.js#66ea8a3451542bb7798369306840e46be1d6ec89",
+    "main": "lib/zone.d.ts",
+    "global": false,
+    "name": "zone.js",
+    "type": "typings"
+  }
+}

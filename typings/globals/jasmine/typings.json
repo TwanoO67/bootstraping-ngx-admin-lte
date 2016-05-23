@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4b36b94d5910aa8a4d20bdcd5bd1f9ae6ad18d3c/jasmine/jasmine.d.ts",
+    "raw": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#4b36b94d5910aa8a4d20bdcd5bd1f9ae6ad18d3c",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4b36b94d5910aa8a4d20bdcd5bd1f9ae6ad18d3c/jasmine/jasmine.d.ts"
+  }
+}

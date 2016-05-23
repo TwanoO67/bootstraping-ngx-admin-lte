@@ -13,7 +13,7 @@ export class AlertComponent implements OnInit {
   public text: string;
   public type: string;
   public icon: string;
-  public close: EventEmitter = new EventEmitter();
+  public close: EventEmitter<AlertComponent> = new EventEmitter<AlertComponent>();
 
   private classes: Array<string> = ['alert'];
   private iconClasses: Array<string> = ['icon', 'fa'];
