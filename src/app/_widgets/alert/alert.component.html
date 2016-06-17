@@ -1,0 +1,8 @@
+<div *ngIf="!closed" [ngClass]="classes" class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true" (click)="onClose()">×</button>
+  <h4><i *ngIf="hasIcon" [ngClass]="iconClasses"></i> {{title}}</h4>
+  {{text}}
+  <div>
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -12,6 +12,31 @@ npm install
 npm start
 ```
 
+## Developpement
+
+Ajouter un composant
+
+```
+cd src/app/_widgets/
+ng g component my-new-widget
+```
+
+
+Ajouter une page
+
+```
+ng g route my-new-page
+```
+
+Ajouter un service
+
+```
+cd src/app/_services/
+ng g service my-new-service
+```
+
+
+
 ## Changelog
 
 - Updated to Angular2 RC2

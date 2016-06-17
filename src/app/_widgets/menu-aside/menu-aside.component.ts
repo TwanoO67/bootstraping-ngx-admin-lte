@@ -37,13 +37,6 @@ export class MenuAsideComponent implements OnInit {
   constructor(
     private _user_serv : UserService,
     public router: Router ){
-    this.current_user = new User({
-      firstname: "FIRSTNAME",
-      lastname: "LASTNAME",
-      email: "EMAIL",
-      avatar_url: "assets/img/user2-160x160.jpg"
-    });
-
     //recuperation de l'url courrante
     this.router.events.subscribe((evt) => this.current_url = evt.url );
 

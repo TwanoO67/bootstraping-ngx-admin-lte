@@ -1,0 +1,38 @@
+<!-- Menu Toggle Button -->
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  <!-- The user image in the navbar-->
+  <img [src]="current_user.avatar_url" class="user-image" [alt]="current_user.getName()">
+  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+  <span class="hidden-xs">{{current_user.getName()}}</span>
+</a>
+<ul class="dropdown-menu">
+  <!-- The user image in the menu -->
+  <li class="user-header">
+    <img [src]="current_user.avatar_url" class="img-circle" [alt]="current_user.getName()">
+    <p>
+      {{current_user.getName()}} - Web Developer
+      <small>Member since {{current_user.creation_date}}</small>
+    </p>
+  </li>
+  <!-- Menu Body -->
+  <li class="user-body">
+    <div class="col-xs-4 text-center">
+      <a href="#">Followers</a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="#">Sales</a>
+    </div>
+    <div class="col-xs-4 text-center">
+      <a href="#">Friends</a>
+    </div>
+  </li>
+  <!-- Menu Footer-->
+  <li class="user-footer">
+    <div class="pull-left">
+      <a href="#" class="btn btn-default btn-flat">Profile</a>
+    </div>
+    <div class="pull-right">
+      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+    </div>
+  </li>
+</ul>

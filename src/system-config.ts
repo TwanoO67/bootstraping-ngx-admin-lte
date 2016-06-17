@@ -34,6 +34,12 @@ const barrels: string[] = [
   'app/_widgets/menu-aside',
   'app/+page2',
   'app/+page3',
+  'app/_widgets/alert',
+  'app/_widgets/box',
+  'app/_widgets/messages-box',
+  'app/_widgets/notification-box',
+  'app/_widgets/tasks-box',
+  'app/_widgets/user-box',
   /** @cli-barrel */
 ];
 

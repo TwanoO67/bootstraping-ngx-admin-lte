@@ -9,7 +9,6 @@ export class UserService{
   constructor() {}
 
   public setCurrentUser(user: User){
-    console.log('push user');
     this.current_user.next(user);
   }
 }
