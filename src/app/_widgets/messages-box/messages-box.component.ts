@@ -19,6 +19,7 @@ export class MessagesBoxComponent implements OnInit {
     public ngOnInit(){
       //à chaque modification de message on change nos données
       this._msg_serv.messages.subscribe((msg: Message[])=>{
+        console.log('reception de message');
         this.messages = msg;
       });
     }
