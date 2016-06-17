@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.12.5/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'e2e' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 verbose run-script [ 'pree2e', 'e2e', 'poste2e' ]
+5 info lifecycle ng2-admin-lte@0.0.0~pree2e: ng2-admin-lte@0.0.0
+6 verbose lifecycle ng2-admin-lte@0.0.0~pree2e: unsafe-perm in lifecycle true
+7 verbose lifecycle ng2-admin-lte@0.0.0~pree2e: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/TwanoO/Documents/PERSO/GIT/ng2-AdminLTE/node_modules/.bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+8 verbose lifecycle ng2-admin-lte@0.0.0~pree2e: CWD: /Users/TwanoO/Documents/PERSO/GIT/ng2-AdminLTE
+9 silly lifecycle ng2-admin-lte@0.0.0~pree2e: Args: [ '-c', 'webdriver-manager update' ]
+10 silly lifecycle ng2-admin-lte@0.0.0~pree2e: Returned: code: 0  signal: null
+11 info lifecycle ng2-admin-lte@0.0.0~e2e: ng2-admin-lte@0.0.0
+12 verbose lifecycle ng2-admin-lte@0.0.0~e2e: unsafe-perm in lifecycle true
+13 verbose lifecycle ng2-admin-lte@0.0.0~e2e: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/TwanoO/Documents/PERSO/GIT/ng2-AdminLTE/node_modules/.bin:~/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+14 verbose lifecycle ng2-admin-lte@0.0.0~e2e: CWD: /Users/TwanoO/Documents/PERSO/GIT/ng2-AdminLTE
+15 silly lifecycle ng2-admin-lte@0.0.0~e2e: Args: [ '-c', 'protractor' ]
+16 silly lifecycle ng2-admin-lte@0.0.0~e2e: Returned: code: 1  signal: null
+17 info lifecycle ng2-admin-lte@0.0.0~e2e: Failed to exec e2e script
+18 verbose stack Error: ng2-admin-lte@0.0.0 e2e: `protractor`
+18 verbose stack Exit status 1
+18 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:232:16)
+18 verbose stack     at emitTwo (events.js:88:13)
+18 verbose stack     at EventEmitter.emit (events.js:173:7)
+18 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+18 verbose stack     at emitTwo (events.js:88:13)
+18 verbose stack     at ChildProcess.emit (events.js:173:7)
+18 verbose stack     at maybeClose (internal/child_process.js:819:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:212:5)
+19 verbose pkgid ng2-admin-lte@0.0.0
+20 verbose cwd /Users/TwanoO/Documents/PERSO/GIT/ng2-AdminLTE/src/app
+21 error Darwin 15.5.0
+22 error argv "/usr/local/Cellar/node/0.12.5/bin/node" "/usr/local/bin/npm" "run" "e2e"
+23 error node v5.2.0
+24 error npm  v3.3.12
+25 error code ELIFECYCLE
+26 error ng2-admin-lte@0.0.0 e2e: `protractor`
+26 error Exit status 1
+27 error Failed at the ng2-admin-lte@0.0.0 e2e script 'protractor'.
+27 error Make sure you have the latest version of node.js and npm installed.
+27 error If you do, this is most likely a problem with the ng2-admin-lte package,
+27 error not with npm itself.
+27 error Tell the author that this fails on your system:
+27 error     protractor
+27 error You can get their info via:
+27 error     npm owner ls ng2-admin-lte
+27 error There is likely additional logging output above.
+28 verbose exit [ 1, true ]
