@@ -39,10 +39,10 @@ ng g service my-new-service
 
 ## Changelog
 
-- Updated to Angular2 RC2
-- Updated Router to 3.0.0.alpha6
+- Updated to Angular2 RC4
+- Updated Router to 3.0.0.alpha8
 - Updated AdminLTE to 2.3.3
-- Updated bootstraping to angular-cli
+- Updated bootstraping to use angular-cli
 
 ## Components
 
