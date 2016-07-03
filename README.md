@@ -36,15 +36,22 @@ ng g service my-new-service
 ```
 
 
-
 ## Changelog
 
+- Added ng2-bootstrap
 - Updated to Angular2 RC4
 - Updated Router to 3.0.0.alpha8
 - Updated AdminLTE to 2.3.3
 - Updated bootstraping to use angular-cli
 
-## Components
+## Components from Ng2-bootstrap
+
+For standard boostrap widget we are using ng2-bootstrap
+
+You can find all widget and the doc here:
+http://valor-software.com/ng2-bootstrap/#/alerts
+
+## Specific Components (deprecated)
 
 AlertComponent
 

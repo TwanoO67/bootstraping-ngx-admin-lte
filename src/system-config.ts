@@ -22,9 +22,12 @@ const barrels: string[] = [
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  //'@angular/core/src/facade/lang',
 
   // Thirdparty barrels.
   'rxjs',
+  'ng2-bootstrap',
+  //'moment',
 
   // App specific barrels.
   'app',
@@ -56,7 +59,10 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    // ng2-bootstrap specifics
+    "ng2-bootstrap":"vendor/ng2-bootstrap",
+    "moment":"vendor/moment/moment.js"
   },
   packages: cliSystemConfigPackages
 });
