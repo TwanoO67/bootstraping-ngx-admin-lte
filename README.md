@@ -51,14 +51,46 @@ For standard boostrap widget we are using ng2-bootstrap
 You can find all widget and the doc here:
 http://valor-software.com/ng2-bootstrap/#/alerts
 
-## Specific Components (deprecated)
+## Specific Components
 
-AlertComponent
+### App Header
+
+This widget handle the header bar, it includes other 'box' widgets for the top navigation:
+
+* Messages Box
+* Notification Box
+* Tasks Box
+* User box
+
+### Messages Box
+
+This widget is registred to the messages service
+
+### Notification Box
+
+WIP This widget is registred to the notification service
+
+### Tasks Box
+
+WIP This widget is registred to the task service
+
+### User box
+
+This widget is registred to the user service
+
+### Menu Aside
+
+This widget handle the left navigation Menu
+
+
+
+### AlertComponent (deprecated, use ng2-bootstrap)
 
 ```
 <alert title="title" text="title" type="info" icon="ban" (close)="onCloseAlert()"></alert>
 ```
-Box
+
+### Box  (deprecated, use ng2-bootstrap)
 
 ```
 <box title="My title" type="warning" icon="ban">Custom content</box>
