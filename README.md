@@ -101,19 +101,19 @@ It is registred to the user service (for the current user display)
 
 ### User
 
-*firstname*:string, First Name of the user
-*lastname*:string, Last Name of the user
-*email*:string, Email address of the user
-*avatar_url*:string, URL for the user avatar, could be absolute or relative
-*creation_date*: string, timestamp of the creation of the user
+* *firstname*: string, First Name of the user
+* *lastname* : string, Last Name of the user
+* *email* : string, Email address of the user
+* *avatar_url* : string, URL for the user avatar, could be absolute or relative
+* *creation_date* : string, timestamp of the creation of the user
 
 ### Message
 
-*title*:string, title of the message
-*content*:string, content of the mesage
-*author*:User, source user of the message
-*destination*:User, destination user of the message
-*date*:string, date of sending
+* *title* : string, title of the message
+* *content* : string, content of the mesage
+* *author* : User, source user of the message
+* *destination* : User, destination user of the message
+* *date* : string, date of sending
 
 ## Services
 
