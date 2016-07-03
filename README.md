@@ -76,12 +76,13 @@ WIP This widget is registred to the task service
 
 ### User box
 
-This widget is registred to the user service
+This widget is registred to the user service (for the current user display)
 
 ### Menu Aside
 
 This widget handle the left navigation Menu
 
+It is registred to the user service (for the current user display)
 
 
 ### AlertComponent (deprecated, use ng2-bootstrap)
@@ -95,3 +96,63 @@ This widget handle the left navigation Menu
 ```
 <box title="My title" type="warning" icon="ban">Custom content</box>
 ```
+
+## Models
+
+### User
+
+*firstname*:string, First Name of the user
+*lastname*:string, Last Name of the user
+*email*:string, Email address of the user
+*avatar_url*:string, URL for the user avatar, could be absolute or relative
+*creation_date*: string, timestamp of the creation of the user
+
+### Message
+
+*title*:string, title of the message
+*content*:string, content of the mesage
+*author*:User, source user of the message
+*destination*:User, destination user of the message
+*date*:string, date of sending
+
+## Services
+
+### User service
+
+This service is used to send/get the current user informations accross the app
+
+For example you can set the current user :
+
+```
+import {User} from "../../_models/user";
+import {UserService} from "../../_services/user.service";
+...
+constructor(
+  private _user_serv: UserService
+){
+...
+ngOnInit(){
+  let user = new User({
+    firstname: "WEBER",
+    lastname: "Antoine",
+    email: "weber.antoine.pro@gmail.com",
+    avatar_url: "assets/img/user2-160x160.jpg"
+  });
+  this._user_serv.setCurrentUser( user );
+```
+
+and you can get the user in a widget:
+
+```
+import {User} from "../../_models/user";
+import {UserService} from "../../_services/user.service";
+...
+private current_user: User;
+constructor(
+  private _user_serv : UserService,
+){
+  //se connecter au modification du user courant
+  this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
+```
+
+warning, the import path are relative to the component you're writing in ...

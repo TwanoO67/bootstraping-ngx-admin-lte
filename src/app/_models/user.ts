@@ -10,7 +10,7 @@ export class User{
     this.lastname = data.lastname || "";
     this.email = data.email || "";
     this.avatar_url = data.avatar_url || "";
-    this.creation_date = data.creation_date || "";
+    this.creation_date = data.creation_date || Date.now();
   }
 
   public getName(){

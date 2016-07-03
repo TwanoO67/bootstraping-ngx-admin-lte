@@ -12,6 +12,6 @@ export class Message{
     this.title = data.title || "";
     this.author = data.author || null;
     this.destination = data.destination || null;
-    this.date = data.date || "";
+    this.date = data.date || Date.now();
   }
 }
