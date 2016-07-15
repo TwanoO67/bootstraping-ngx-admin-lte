@@ -21,13 +21,15 @@ export class App {
   constructor(
     private _user_serv: UserService,
     private _msg_serv: MessagesService
-  ){
+  ) {
 
   }
 
-  ngOnInit(){
-    //on envoi l'evenement resize, pour AdminLTE
-    window.dispatchEvent(new Event('resize'));
+  ngOnInit() {
+
+    var event = document.createEvent("Event");
+    event.initEvent("submit", false, true);
+    window.dispatchEvent(event);
 
     //envoi d'un user de test
     let user1 = new User({
@@ -42,10 +44,10 @@ export class App {
       email: "EMAIL",
       avatar_url: "assets/img/user2-160x160.jpg"
     });
-    this._user_serv.setCurrentUser( user1 );
+    this._user_serv.setCurrentUser(user1);
 
     //envoi d'un message de test
-    this._msg_serv.addMessage( new Message({
+    this._msg_serv.addMessage(new Message({
       title: "un message super important",
       content: "le contenu d'un message d'une importance extreme",
       author: user2,
