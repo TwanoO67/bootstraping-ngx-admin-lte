@@ -3,6 +3,6 @@
 
   <alert type="info">Hello from ng2-bootstrap  {{ date.toDateString() }}</alert>
 
-  <datepicker [(ngModel)]="date" showWeeks="true"></datepicker>
+  <datepicker (ngModel)="date" [showWeeks]="true"></datepicker>
 
 </p>

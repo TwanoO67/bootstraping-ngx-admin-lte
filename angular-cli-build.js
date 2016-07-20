@@ -8,13 +8,11 @@ module.exports = function(defaults) {
     vendorNpmFiles: [
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',
-      'zone.js/dist/*.js',
+      'zone.js/dist//*.+(js|js.map)',
       'es6-shim/es6-shim.js',
-      'reflect-metadata/*.js',
+      'reflect-metadata//*.+(ts|js|js.map)',
       'rxjs/**/*.js',
       '@angular/**/*.js',
-      //ng2-bootstrap specific
-      //'@angular/core/src/facade/lang.js',
       'moment/**/*.js',
       'ng2-bootstrap/**/*.js'
     ]
