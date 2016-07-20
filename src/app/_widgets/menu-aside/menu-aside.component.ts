@@ -8,7 +8,6 @@ import {UserService} from "../../_services/user.service";
   selector: 'menu-aside',
   templateUrl: 'menu-aside.component.html',
   styleUrls: ['menu-aside.component.css'],
-  providers: [Location],
   directives: [ROUTER_DIRECTIVES]
 })
 export class MenuAsideComponent implements OnInit {
