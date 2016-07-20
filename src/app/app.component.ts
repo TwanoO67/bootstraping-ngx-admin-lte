@@ -34,7 +34,7 @@ export class App {
     else{
       //solution for IE from @hakonamatata
       var event = document.createEvent("Event");
-      event.initEvent("submit", false, true);
+      event.initEvent("resize", false, true);
       window.dispatchEvent(event);
     }
 
