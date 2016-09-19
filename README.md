@@ -89,19 +89,6 @@ This widget handle the left navigation Menu
 
 It is registred to the user service (for the current user display)
 
-
-### AlertComponent (deprecated, use ng2-bootstrap)
-
-```
-<alert title="title" text="title" type="info" icon="ban" (close)="onCloseAlert()"></alert>
-```
-
-### Box  (deprecated, use ng2-bootstrap)
-
-```
-<box title="My title" type="warning" icon="ban">Custom content</box>
-```
-
 ## Models
 
 ### User
