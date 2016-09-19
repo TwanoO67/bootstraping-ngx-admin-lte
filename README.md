@@ -38,8 +38,14 @@ ng g service my-new-service
 
 ## Changelog
 
+<<<<<<< HEAD
 - Updated to Angular2.0.0 Final
 - Updated Router to 3.0.0 Final
+=======
+- Updated ng2-bootstrap to use @angular/forms:0.2
+- Updated to Angular2 RC4
+- Updated Router to 3.0.0.beta2
+>>>>>>> d738f0b7fd849426f401376f7dd17322a16dd6d1
 - Updated AdminLTE to 2.3.3
 - Updated bootstraping to use angular-cli webpack
 
