@@ -1,22 +1,16 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES} from '@angular/router';
-import { AppHeaderComponent } from "./_widgets/app-header";
-import { MenuAsideComponent } from "./_widgets/menu-aside";
 import { User } from "./_models/user";
 import { UserService} from "./_services/user.service";
 import { Message } from "./_models/message";
-import {MessagesService} from "./_services/messages.service";
+import { MessagesService } from "./_services/messages.service";
 
 @Component({
-  moduleId: module.id,
-  selector: 'app',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  directives: [ROUTER_DIRECTIVES, AppHeaderComponent, MenuAsideComponent]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  //styleUrls: ['./app.component.css']
 })
-
-export class App {
-  title = 'ng2-admin-lte works!';
+export class AppComponent {
+  title = 'app works!';
 
   constructor(
     private _user_serv: UserService,
@@ -34,13 +28,13 @@ export class App {
       firstname: "WEBER",
       lastname: "Antoine",
       email: "weber.antoine.pro@gmail.com",
-      avatar_url: "assets/img/user2-160x160.jpg"
+      avatar_url: "public/assets/img/user2-160x160.jpg"
     });
     let user2 = new User({
       firstname: "FIRSTNAME",
       lastname: "LASTNAME",
       email: "EMAIL",
-      avatar_url: "assets/img/user2-160x160.jpg"
+      avatar_url: "public/assets/img/user2-160x160.jpg"
     });
     this._user_serv.setCurrentUser( user1 );
 
@@ -53,6 +47,4 @@ export class App {
     }));
 
   }
-
-
 }

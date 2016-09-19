@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Ng2AdminLTE</title>
-  <base href=".">
-  {{content-for 'head'}}
+  <base href="/">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,9 +15,9 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="assets/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="public/assets/css/AdminLTE.min.css">
     <!-- AdminLTE Skin -->
-    <link rel="stylesheet" href="assets/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="public/assets/css/skins/skin-blue.min.css">
 
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
@@ -33,7 +33,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
       <div class="wrapper">
-        <app>Loading...</app>
+        <app-root>Loading...</app-root>
 
         <!-- Main Footer -->
           <footer class="main-footer">
@@ -112,21 +112,12 @@
         <!-- REQUIRED JS SCRIPTS -->
 
         <!-- jQuery 2.1.4 -->
-        <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script src="public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
         <!-- Bootstrap 3.3.5 -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!-- AdminLTE App -->
-        <script src="assets/js/app.min.js"></script>
+        <script src="public/assets/js/app.min.js"></script>
 
-  <script src="vendor/es6-shim/es6-shim.js"></script>
-  <script src="vendor/reflect-metadata/Reflect.js"></script>
-  <script src="vendor/systemjs/dist/system.src.js"></script>
-  <script src="vendor/zone.js/dist/zone.js"></script>
 
-  <script>
-    System.import('system-config.js').then(function () {
-      System.import('main');
-    }).catch(console.error.bind(console));
-  </script>
 </body>
 </html>

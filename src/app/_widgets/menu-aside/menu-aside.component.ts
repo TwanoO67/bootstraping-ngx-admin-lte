@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 import {User} from "../../_models/user";
+import {Router} from "@angular/router";
 import {UserService} from "../../_services/user.service";
 
 @Component({
-  moduleId: module.id,
   selector: 'menu-aside',
   templateUrl: 'menu-aside.component.html',
   styleUrls: ['menu-aside.component.css'],
-  providers: [Location],
-  directives: [ROUTER_DIRECTIVES]
+  providers: [Location]
 })
 export class MenuAsideComponent implements OnInit {
   private current_user: User;

@@ -1,16 +1,12 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import './polyfills.ts';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { App, environment } from './app/';
-import {UserService} from "./app/_services/user.service";
-import {MessagesService} from "./app/_services/messages.service"
-import { APP_ROUTER_PROVIDERS } from './app/app.routes';
+import { environment } from './environments/environment';
+import { AppModule } from './app/app.module';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(App,[
-  APP_ROUTER_PROVIDERS,
-  MessagesService,
-  UserService
-]);
+platformBrowserDynamic().bootstrapModule(AppModule);

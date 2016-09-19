@@ -1,7 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
   selector: 'alert',
   inputs: ['title', 'text', 'type', 'icon'],
   outputs: ['close'],

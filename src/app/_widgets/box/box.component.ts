@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
   selector: 'box',
   inputs: ['title', 'type', 'icon'],
   templateUrl: 'box.component.html',

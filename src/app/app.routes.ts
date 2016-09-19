@@ -1,19 +1,12 @@
-import { provideRouter, RouterConfig } from '@angular/router';
-import { HomeComponent } from './+home';
-import {Page2Component} from './+page2';
-import {Page3Component} from './+page3';
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-export const routes: RouterConfig = [
-  {
-    path: '',
-    redirectTo: 'home',
-    terminal: true
-  },
-  {path: 'home', component: HomeComponent},
-  {path: 'page2', component: Page2Component},
-  {path: 'page3', component: Page3Component}
+// Components
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+    // Root
+    { path: '', component: HomeComponent},
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-  provideRouter(routes)
-];
+export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

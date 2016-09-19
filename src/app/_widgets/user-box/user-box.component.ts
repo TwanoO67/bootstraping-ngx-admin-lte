@@ -3,7 +3,6 @@ import {User} from "../../_models/user";
 import {UserService} from "../../_services/user.service";
 
 @Component({
-  moduleId: module.id,
   selector: '.userBox',
   templateUrl: 'user-box.component.html',
   styleUrls: ['user-box.component.css']

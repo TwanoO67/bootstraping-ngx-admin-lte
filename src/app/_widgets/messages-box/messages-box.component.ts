@@ -3,7 +3,6 @@ import {MessagesService} from "../../_services/messages.service"
 import {Message} from "../../_models/message"
 
 @Component({
-  moduleId: module.id,
   selector: '.messagesBox',
   templateUrl: 'messages-box.component.html',
   styleUrls: ['messages-box.component.css']
