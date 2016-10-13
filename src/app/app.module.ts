@@ -18,6 +18,7 @@ import { MessagesService } from "./_services/messages.service";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routes';
+import { PageNumComponent } from './page-num/page-num.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { routing } from './app.routes';
     NotificationBoxComponent,
     TasksBoxComponent,
     UserBoxComponent,
-    HomeComponent
+    HomeComponent,
+    PageNumComponent
   ],
   imports: [
     AlertModule,

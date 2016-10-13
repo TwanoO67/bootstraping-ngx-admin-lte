@@ -6,8 +6,7 @@ import {UserService} from "../../_services/user.service";
 @Component({
   selector: 'menu-aside',
   templateUrl: 'menu-aside.component.html',
-  styleUrls: ['menu-aside.component.css'],
-  providers: [Location]
+  styleUrls: ['menu-aside.component.css']
 })
 export class MenuAsideComponent implements OnInit {
   private current_user: User;
@@ -22,11 +21,11 @@ export class MenuAsideComponent implements OnInit {
       "sublinks": [
         {
           "title": "Page 2",
-          "link": ['/page2'],
+          "link": ['/page/2'],
         },
         {
           "title": "Page 3",
-          "link": ['/page3'],
+          "link": ['/page/3'],
         }
       ]
     }
