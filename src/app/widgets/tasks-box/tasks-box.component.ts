@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from "../../_models/message";
+import {Message} from "../../models/message";
 
 @Component({
   selector: '.tasksBox',

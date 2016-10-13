@@ -1,6 +1,6 @@
 //based on https://github.com/ng-book/angular2-rxjs-chat/blob/master/app/ts/services/MessagesService.ts
-import {User} from "../_models/user";
-import {Message} from "../_models/message";
+import {User} from "../models/user";
+import {Message} from "../models/message";
 import {Injectable} from '@angular/core';
 import {Observable, Subject, ReplaySubject} from 'rxjs/Rx';
 

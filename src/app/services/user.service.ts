@@ -1,4 +1,4 @@
-import {User} from "../_models/user";
+import {User} from "../models/user";
 import {Injectable} from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs/Rx';
 

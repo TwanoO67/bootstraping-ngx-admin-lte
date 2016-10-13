@@ -15,12 +15,12 @@ let modules = [
   RouterModule,
 ];
 
-import { AppHeaderComponent } from "./_widgets/app-header";
-import { MenuAsideComponent } from "./_widgets/menu-aside";
-import { MessagesBoxComponent} from "./_widgets/messages-box";
-import { NotificationBoxComponent } from "./_widgets/notification-box";
-import { TasksBoxComponent } from "./_widgets/tasks-box";
-import { UserBoxComponent } from "./_widgets/user-box"
+import { AppHeaderComponent } from "./widgets/app-header";
+import { MenuAsideComponent } from "./widgets/menu-aside";
+import { MessagesBoxComponent} from "./widgets/messages-box";
+import { NotificationBoxComponent } from "./widgets/notification-box";
+import { TasksBoxComponent } from "./widgets/tasks-box";
+import { UserBoxComponent } from "./widgets/user-box"
 
 let widgets = [
   AppComponent,
@@ -32,16 +32,16 @@ let widgets = [
   UserBoxComponent
 ];
 
-import { UserService } from "./_services/user.service";
-import { MessagesService } from "./_services/messages.service";
+import { UserService } from "./services/user.service";
+import { MessagesService } from "./services/messages.service";
 
 let services =  [
   UserService,
   MessagesService
 ];
 
-import { HomeComponent } from './_pages/home/home.component';
-import { PageNumComponent } from './_pages/page-num/page-num.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNumComponent } from './pages/page-num/page-num.component';
 
 let pages = [
   HomeComponent,

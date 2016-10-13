@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { User } from "./_models/user";
-import { UserService} from "./_services/user.service";
-import { Message } from "./_models/message";
-import { MessagesService } from "./_services/messages.service";
+import { User } from "./models/user";
+import { UserService} from "./services/user.service";
+import { Message } from "./models/message";
+import { MessagesService } from "./services/messages.service";
 
 @Component({
   selector: 'app-root',

@@ -17,21 +17,21 @@ npm start
 Ajouter un composant
 
 ```
-cd src/app/_widgets/
+cd src/app/widgets/
 ng g component my-new-widget
 ```
 
 Ajouter une page
 
 ```
-cd src/app/_pages/
+cd src/app/pages/
 ng g component my-new-page
 ```
 
 Ajouter un service
 
 ```
-cd src/app/_services/
+cd src/app/services/
 ng g service my-new-service
 ```
 
@@ -110,8 +110,8 @@ This service is used to send/get the current user informations accross the app
 For example you can set the current user :
 
 ```
-import {User} from "../../_models/user";
-import {UserService} from "../../_services/user.service";
+import {User} from "../../models/user";
+import {UserService} from "../../services/user.service";
 ...
 constructor(
   private _user_serv: UserService
@@ -130,8 +130,8 @@ ngOnInit(){
 and you can get the user in a widget:
 
 ```
-import {User} from "../../_models/user";
-import {UserService} from "../../_services/user.service";
+import {User} from "../../models/user";
+import {UserService} from "../../services/user.service";
 ...
 private current_user: User;
 constructor(

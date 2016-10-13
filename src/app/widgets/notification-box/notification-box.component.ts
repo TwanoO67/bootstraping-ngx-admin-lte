@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from "../../_models/message";
-import {MessagesService} from "../../_services/messages.service"
+import {Message} from "../../models/message";
+import {MessagesService} from "../../services/messages.service"
 
 @Component({
   selector: '.notificationsBox',

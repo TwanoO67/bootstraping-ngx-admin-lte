@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../../_models/user";
+import {User} from "../../models/user";
 import {Router} from "@angular/router";
-import {UserService} from "../../_services/user.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'menu-aside',
