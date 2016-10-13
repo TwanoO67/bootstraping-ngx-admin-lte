@@ -2,8 +2,8 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { HomeComponent } from './home/home.component';
-import { PageNumComponent } from './page-num/page-num.component';
+import { HomeComponent } from './_pages/home/home.component';
+import { PageNumComponent } from './_pages/page-num/page-num.component';
 
 const routes: Routes = [
     // Root

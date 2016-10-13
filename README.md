@@ -24,7 +24,7 @@ ng g component my-new-widget
 Ajouter une page
 
 ```
-cd src/app
+cd src/app/_pages/
 ng g component my-new-page
 ```
 
