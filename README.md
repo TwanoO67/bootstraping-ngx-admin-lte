@@ -21,11 +21,11 @@ cd src/app/_widgets/
 ng g component my-new-widget
 ```
 
-
 Ajouter une page
 
 ```
-ng g route my-new-page
+cd src/app
+ng g component my-new-page
 ```
 
 Ajouter un service
@@ -36,13 +36,12 @@ ng g service my-new-service
 ```
 
 
-## Changelog
+## Changelog 13/10/2016
 
-- Updated to Angular2.0.0 Final
-- Updated Router to 3.0.0 Final
-- Updated ng2-bootstrap to use @angular/forms:0.2
-- Updated AdminLTE to 2.3.3
-- Updated bootstraping to use angular-cli webpack
+- Updated to Angular 2.1
+- Updated to Angular-cli webpack beta 17
+- Fix: Build issues, rigth nav issue
+- Add: Second page for routing example
 
 ## Components from Ng2-bootstrap
 
@@ -122,7 +121,7 @@ ngOnInit(){
   let user = new User({
     firstname: "WEBER",
     lastname: "Antoine",
-    email: "weber.antoine.pro@gmail.com",
+    email: "why-not-yop@yopmail.com",
     avatar_url: "assets/img/user2-160x160.jpg"
   });
   this._user_serv.setCurrentUser( user );
