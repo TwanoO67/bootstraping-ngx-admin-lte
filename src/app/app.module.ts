@@ -5,6 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+
+export const firebaseConfig: FirebaseAppConfig = {
+  apiKey: 'AIzaSyCo-oku9rccI-4s544uhpveKQ0ev8yxkPI',
+  authDomain: 'testapi-e94f8.firebaseapp.com',
+  databaseURL: 'https://testapi-e94f8.firebaseio.com',
+  storageBucket: 'testapi-e94f8.appspot.com'
+};
 
 let modules = [
   AlertModule,
@@ -13,6 +21,7 @@ let modules = [
   FormsModule,
   HttpModule,
   RouterModule,
+  AngularFireModule.initializeApp(firebaseConfig)
 ];
 
 import { AppHeaderComponent } from "./widgets/app-header";
@@ -42,16 +51,17 @@ let services =  [
 
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
+import { ClientComponent } from './pages/client/client.component';
 
 let pages = [
   HomeComponent,
-  PageNumComponent
+  PageNumComponent,
+  ClientComponent
 ]
 
 //main bootstrap
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
-
 
 @NgModule({
   declarations: [

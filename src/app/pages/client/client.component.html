@@ -1,0 +1,23 @@
+<div class="well">
+    <div class="row">
+        <div class="col-md-4" *ngFor='let client of clients | async'>
+            <div class="well">
+                <form>
+                    <div class="form-group">
+                        <label for="id">Id</label>
+                        <input type="text" disabled="disabled" [(ngModel)]="client.clientId" name="clientId" class="form-control" id="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="client.name" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adress">Adress</label>
+                        <input type="text" class="form-control" [(ngModel)]="client.adress" name="adress" id="adress">
+                    </div>
+                    <button type="submit" class="btn btn-default" (click)="save(client)">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
