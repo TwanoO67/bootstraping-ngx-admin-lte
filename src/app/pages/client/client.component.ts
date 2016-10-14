@@ -1,25 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable, AngularFire } from 'angularfire2';
+import { FirebaseListObservable } from 'angularfire2';
 import { Client } from '../../models/client';
-import * as _ from 'lodash'; 
+import { ClientDAL } from '../../dal/client.dal';
 
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css']
+  styleUrls: ['./client.component.css'],
+  providers: [ClientDAL]
 })
 export class ClientComponent implements OnInit {
   private clients: FirebaseListObservable<Array<Client>>;
 
-  constructor(private af: AngularFire) { }
+  constructor(private dal: ClientDAL) { }
 
   ngOnInit() {
-    this.clients = this.af.database.list('clients');
+    this.clients = this.dal.readAll();
   }
 
-  private save = (client: Client): void => {
-    let clientCopy = _.cloneDeep(client);
-    this.clients.update(client.$key, clientCopy);
+  private save = (client: Client): void => {   
+    this.dal.update(client['$key'], new Client(client.name, client.clientId, client.address));
   }
 
+  private delete = (client: Client): void => {
+    this.dal.delete(client);
+  }
+
+  private add = (): void => {
+    this.dal.create(new Client());
+  }
 }

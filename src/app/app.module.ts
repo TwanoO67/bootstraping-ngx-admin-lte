@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+import {ToasterModule} from 'angular2-toaster/angular2-toaster';
 
 export const firebaseConfig: FirebaseAppConfig = {
   apiKey: 'AIzaSyCo-oku9rccI-4s544uhpveKQ0ev8yxkPI',
@@ -21,7 +22,8 @@ let modules = [
   FormsModule,
   HttpModule,
   RouterModule,
-  AngularFireModule.initializeApp(firebaseConfig)
+  AngularFireModule.initializeApp(firebaseConfig),
+  ToasterModule
 ];
 
 import { AppHeaderComponent } from "./widgets/app-header";
