@@ -14,9 +14,10 @@ export class ClientDAL {
 	public read = (id: string): FirebaseListObservable<Client[]> => {
 		return this.af.database.list('clients', {
 			query: {
-				equalTo: {'clientId': id}
+				orderByChild: 'clientId',
+				equalTo: id
 			}
-		})
+		});
 	}
 
 	public create = (newClient: Client): void => {
