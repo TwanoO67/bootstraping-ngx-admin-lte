@@ -3,6 +3,5 @@
 // https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html
 
 ///<reference path="../node_modules/firebase/firebase.d.ts"/>
-///<reference path="../node_modules/@types/lodash/index.d.ts"/>
 
 declare var System: any;
