@@ -5,6 +5,7 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
+  <toaster-container [toasterconfig]="toastrConfig"></toaster-container>
   <section class="content-header">
     <h1>
       Page Header
@@ -18,9 +19,10 @@
 
   <!-- Main content -->
   <section class="content">
-
-    <!-- Your Page Content Here -->
-    <router-outlet></router-outlet>
-
+    <div class="box box-default">
+      <div class="box-body">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </section><!-- /.content -->
 </div><!-- /.content-wrapper -->

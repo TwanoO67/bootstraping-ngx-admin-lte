@@ -3,6 +3,7 @@ import { User } from "./models/user";
 import { UserService} from "./services/user.service";
 import { Message } from "./models/message";
 import { MessagesService } from "./services/messages.service";
+import { ToasterService, ToasterConfig} from 'angular2-toaster/angular2-toaster';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,14 @@ import { MessagesService } from "./services/messages.service";
 })
 export class AppComponent {
   title = 'app works!';
+  private toastrConfig: ToasterConfig;
 
-  constructor(
-    private _user_serv: UserService,
-    private _msg_serv: MessagesService
-  ){
-
+  constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {
+    this.toastrConfig = new ToasterConfig({
+      showCloseButton: true,
+      newestOnTop: true,
+      tapToDismiss: false
+    });
   }
 
   ngOnInit(){

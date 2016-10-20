@@ -18,6 +18,11 @@ export class MenuAsideComponent implements OnInit {
       "link": ['/']
     },
     {
+      "title": "Client",
+      "icon": "usd",
+      "link": ['/client']
+    },
+    {
       "title": "Sub menu",
       "icon": "link",
       "sublinks": [
