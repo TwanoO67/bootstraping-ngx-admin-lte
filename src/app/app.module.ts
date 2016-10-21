@@ -9,10 +9,10 @@ import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import {ToasterModule} from 'angular2-toaster/angular2-toaster';
 
 export const firebaseConfig: FirebaseAppConfig = {
-  apiKey: 'AIzaSyCo-oku9rccI-4s544uhpveKQ0ev8yxkPI',
-  authDomain: 'testapi-e94f8.firebaseapp.com',
-  databaseURL: 'https://testapi-e94f8.firebaseio.com',
-  storageBucket: 'testapi-e94f8.appspot.com'
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  storageBucket: ''
 };
 
 let modules = [
