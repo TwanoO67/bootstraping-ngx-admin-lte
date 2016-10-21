@@ -1,9 +1,7 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
-
   <!-- sidebar: style can be found in sidebar.less -->
-  <section class="sidebar">
-
+  <section class="sidebar" *ngIf="auth.IsAuthenticated()">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel">
       <div class="pull-left image">
@@ -15,7 +13,6 @@
         <a href="#"><i class="fa fa-circle text-success" ></i> Online</a>
       </div>
     </div>
-
     <!-- search form (Optional) -->
     <form action="#" method="get" class="sidebar-form">
       <div class="input-group">
@@ -26,11 +23,9 @@
       </div>
     </form>
     <!-- /.search form -->
-
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
       <li class="header">NAVIGATION</li>
-
       <template ngFor let-item [ngForOf]="links" >
         <template [ngIf]="!item.sublinks">
           <li [class.active]="item.link[0] === current_url" >
@@ -53,17 +48,13 @@
                 <a [routerLink]="subitem.link">
                   <i *ngIf="subitem.icon" class="fa fa-{{subitem.icon}}"></i>
                   <span>{{subitem.title}}</span>
-
                 </a>
-
               </li>
               </template>
             </ul>
           </li>
         </template>
       </template>
-      <!-- Optionally, you can add icons to the links -->
-
     </ul><!-- /.sidebar-menu -->
   </section>
   <!-- /.sidebar -->

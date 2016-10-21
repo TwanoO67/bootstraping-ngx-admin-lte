@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from "./models/user";
 import { UserService} from "./services/user.service";
 import { Message } from "./models/message";
@@ -10,11 +10,11 @@ import { ToasterService, ToasterConfig} from 'angular2-toaster/angular2-toaster'
   templateUrl: './app.component.html',
   //styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app works!';
   private toastrConfig: ToasterConfig;
 
-  constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {
+  constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {    
     this.toastrConfig = new ToasterConfig({
       showCloseButton: true,
       newestOnTop: true,
@@ -57,7 +57,6 @@ export class AppComponent {
       author: user2,
       destination: user1
     }));
-
   }
 
   detectIE(): any{

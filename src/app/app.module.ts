@@ -45,10 +45,14 @@ let widgets = [
 
 import { UserService } from "./services/user.service";
 import { MessagesService } from "./services/messages.service";
+import { AuthService } from "./services/auth.service";
+import { CanActivateGuard } from './services/guard.service';
 
 let services =  [
   UserService,
-  MessagesService
+  MessagesService,
+  AuthService,
+  CanActivateGuard
 ];
 
 import { HomeComponent } from './pages/home/home.component';

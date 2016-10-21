@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../../models/user";
-import {UserService} from "../../services/user.service";
+import { User } from "../../models/user";
+import { UserService } from "../../services/user.service";
+import { AuthService } from '../../services/auth.service'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: '.userBox',
@@ -10,9 +12,9 @@ import {UserService} from "../../services/user.service";
 export class UserBoxComponent implements OnInit {
     current_user: User;
 
-    constructor( private _user_serv : UserService ){
+    constructor( private userService : UserService, private auth: AuthService, private router: Router ){
       //se connecter au modif du user courant
-      this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
+      this.userService.current_user.subscribe((user: User) => this.current_user = user);
     }
 
     public ngOnInit(){
@@ -20,5 +22,10 @@ export class UserBoxComponent implements OnInit {
       /*this._user_serv.current_user.subscribe((user: User)=>{
         this.current_user = user;
       });*/
+    }
+
+    private Logout = (): void => {
+      this.router.navigate(['/']);
+      this.auth.Logout();
     }
 }

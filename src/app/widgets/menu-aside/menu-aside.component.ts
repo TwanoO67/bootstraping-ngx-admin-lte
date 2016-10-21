@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {User} from "../../models/user";
-import {Router} from "@angular/router";
-import {UserService} from "../../services/user.service";
+import { Component, OnInit }  from '@angular/core';
+import { User }               from "../../models/user";
+import { Router }             from "@angular/router";
+import { UserService }        from "../../services/user.service";
+import { AuthService }        from "../../services/auth.service";
 
 @Component({
   selector: 'menu-aside',
@@ -38,9 +39,7 @@ export class MenuAsideComponent implements OnInit {
     }
   ];
 
-  constructor(
-    private _user_serv : UserService,
-    public router: Router ){
+  constructor(private _user_serv : UserService, public router: Router, private auth: AuthService){
     //recuperation de l'url courrante
     this.router.events.subscribe((evt) => this.current_url = evt.url );
 
