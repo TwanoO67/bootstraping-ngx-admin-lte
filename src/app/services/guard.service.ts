@@ -13,6 +13,6 @@ export class CanActivateGuard implements CanActivate {
 			this.auth.Login();
 		}
 
-		return this.auth.IsAuthenticated();
+		return isAuth;
 	}
 }
