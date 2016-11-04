@@ -1,4 +1,4 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2';
 import { Client } from '../../models/client';
 import { ClientDAL } from '../../dal/client.dal';
