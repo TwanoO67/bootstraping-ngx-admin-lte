@@ -92,8 +92,7 @@ export class AuthService {
 		return {
 			additionalSignUpFields: [
 				{name: 'name', placeholder: 'Your name'}
-			],
-			closable: false
+			]
 		}
 	}
 
