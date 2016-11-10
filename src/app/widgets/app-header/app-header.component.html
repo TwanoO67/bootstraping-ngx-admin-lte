@@ -31,7 +31,7 @@
       </ul>
       <ul class="nav navbar-nav" *ngIf="!auth.IsAuthenticated()">
         <li>
-          <a href="#" (click)="auth.Login()" ><i class="fa fa-sign-in"></i> Login</a>
+          <a (click)="auth.Login()"><i class="fa fa-sign-in"></i> Login</a>
         </li>
       </ul>
     </div>

@@ -10,7 +10,6 @@ import { AuthService }        from "../../services/auth.service";
   styleUrls: ['menu-aside.component.css']
 })
 export class MenuAsideComponent implements OnInit {
-  private current_user: User;
   private current_url: string;
   private links: Array<any> = [
     {
@@ -42,12 +41,10 @@ export class MenuAsideComponent implements OnInit {
   constructor(private _user_serv : UserService, public router: Router, private auth: AuthService){
     //recuperation de l'url courrante
     this.router.events.subscribe((evt) => this.current_url = evt.url );
-
-    //se connecter au modification du user courant
-    this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
-
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
 }

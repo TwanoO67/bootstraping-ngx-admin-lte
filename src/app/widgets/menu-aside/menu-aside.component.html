@@ -5,10 +5,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img [src]="current_user.avatar_url" class="img-circle" [alt]="current_user.getName()">
+        <img [src]="auth.GetUserPicture()" class="img-circle" [alt]="auth.GetUserName()">
       </div>
       <div class="pull-left info">
-        <p>{{current_user.getName()}}</p>
+        <p>{{auth.GetUserName()}}</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success" ></i> Online</a>
       </div>

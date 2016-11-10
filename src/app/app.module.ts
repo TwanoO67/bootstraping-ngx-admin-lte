@@ -47,12 +47,14 @@ import { UserService } from "./services/user.service";
 import { MessagesService } from "./services/messages.service";
 import { AuthService } from "./services/auth.service";
 import { CanActivateGuard } from './services/guard.service';
+import { NotificationService } from './services/notification.service';
 
 let services =  [
   UserService,
   MessagesService,
   AuthService,
-  CanActivateGuard
+  CanActivateGuard,
+  NotificationService
 ];
 
 import { HomeComponent } from './pages/home/home.component';
@@ -62,7 +64,7 @@ import { ClientComponent } from './pages/client/client.component';
 let pages = [
   HomeComponent,
   PageNumComponent,
-  ClientComponent
+  ClientComponent,
 ]
 
 //main bootstrap
