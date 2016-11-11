@@ -3,6 +3,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { NotificationService } from './notification.service';
 let Auth0Lock = require('auth0-lock').default;
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
@@ -11,13 +12,13 @@ export class AuthService {
 	private profile: Auth0UserProfile;
 
 	constructor(private af: AngularFire, private notif: NotificationService) {
-		this.lock = new Auth0Lock('uyZPfupm9XEM2jdDwiz9xGmvDnly5ydU', 'dominiclapointe.auth0.com', this.GenerateLockOption());
-		this.auth = new Auth0({ domain: 'dominiclapointe.auth0.com', clientID: 'uyZPfupm9XEM2jdDwiz9xGmvDnly5ydU', callbackURL: '' });
+		this.lock = new Auth0Lock(environment.auth0.clientID, environment.auth0.domain , this.GenerateLockOption());
+		this.auth = new Auth0({ domain: environment.auth0.domain, clientID: environment.auth0.clientID, callbackURL: '' });
 		this.profile = this.GetProfile()
 
 		this.lock.on('authenticated', (authResult: any): void => {
 			localStorage.setItem('id_token', authResult.idToken);
-			
+
 			this.lock.getProfile(authResult.idToken, (err: Auth0Error, profile: Auth0UserProfile): void => {
 				if (err) {
 					this.notif.Error(err.message);
@@ -25,7 +26,7 @@ export class AuthService {
 				else {
 					localStorage.setItem('profile', JSON.stringify(profile));
 					this.profile = profile;
-				
+
 					this.auth.getDelegationToken(this.GenerateAuthOption(authResult.idToken), (err: Auth0Error, token: Auth0DelegationToken): void => {
 						if (err) {
 							this.notif.Error(err.message);
@@ -56,13 +57,13 @@ export class AuthService {
 			if (this.profile.user_metadata) {
 				return this.profile.user_metadata.name;
 			}
-			
+
 			return this.profile.name || this.profile.email;
 		}
 
 		return '';
 	}
- 
+
 	public Login = (): void => {
 		this.lock.show();
 	}

@@ -7,13 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import {ToasterModule} from 'angular2-toaster/angular2-toaster';
-
-export const firebaseConfig: FirebaseAppConfig = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  storageBucket: ''
-};
+import { environment } from '../environments/environment';
 
 let modules = [
   AlertModule,
@@ -22,7 +16,7 @@ let modules = [
   FormsModule,
   HttpModule,
   RouterModule,
-  AngularFireModule.initializeApp(firebaseConfig),
+  AngularFireModule.initializeApp(environment.firebase),
   ToasterModule
 ];
 
