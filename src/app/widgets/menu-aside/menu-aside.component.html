@@ -29,7 +29,11 @@
       <template ngFor let-item [ngForOf]="links" >
         <template [ngIf]="!item.sublinks">
           <li [class.active]="item.link[0] === current_url" >
-            <a [routerLink]="item.link">
+            <a *ngIf="!item.external" [routerLink]="item.link">
+              <i class="fa fa-{{item.icon}}"></i>
+              <span>{{item.title}}</span>
+            </a>
+            <a *ngIf="item.external" [href]="item.link" [target]="item.target">
               <i class="fa fa-{{item.icon}}"></i>
               <span>{{item.title}}</span>
             </a>
@@ -45,7 +49,11 @@
             <ul class="treeview-menu">
               <template ngFor let-subitem [ngForOf]="item.sublinks" >
               <li [class.active]="subitem.link[0] === current_url">
-                <a [routerLink]="subitem.link">
+                <a *ngIf="!subitem.external" [routerLink]="subitem.link">
+                  <i *ngIf="subitem.icon" class="fa fa-{{subitem.icon}}"></i>
+                  <span>{{subitem.title}}</span>
+                </a>
+                <a *ngIf="subitem.external" [href]="subitem.link" [target]="subitem.target">
                   <i *ngIf="subitem.icon" class="fa fa-{{subitem.icon}}"></i>
                   <span>{{subitem.title}}</span>
                 </a>
