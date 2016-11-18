@@ -12,8 +12,8 @@ env:
     - CHROME_BIN=chromium-browser
 before_script:
   - sh -e /etc/init.d/xvfb start
-  - pwd
-  - cp ng2-admin-lte/src/environments/environments.ts ng2-admin-lte/src/environments/environments.prod.ts
+  - echo $TRAVIS_BUILD_DIR
+  - cp $TRAVIS_BUILD_DIR/src/environments/environments.ts $TRAVIS_BUILD_DIR/src/environments/environments.prod.ts
 install:
   - npm install
 script:
