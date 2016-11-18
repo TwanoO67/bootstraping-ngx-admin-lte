@@ -35,6 +35,33 @@ export class MenuAsideComponent implements OnInit {
           "link": ['/page/3'],
         }
       ]
+    },
+    {
+      "title": "External Link",
+      "icon": "google",
+      "link": ['http://google.com'],
+      "external": true,
+      "target": "_blank"
+    },
+    {
+      "title": "External Links",
+      "icon": "link",
+      "sublinks": [
+        {
+          "title": "Github",
+          "link": ['http://github.com'],
+          "icon": "github",
+          "external": true,
+          "target": "_blank"
+        },
+        {
+          "title": "Yahoo",
+          "link": ['http://yahoo.com'],
+          "icon": "yahoo",
+          "external": true,
+          "target": "_blank"
+        }
+      ]
     }
   ];
 
