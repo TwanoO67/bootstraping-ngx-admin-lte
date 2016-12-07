@@ -4,8 +4,8 @@ import {Message} from "../../models/message"
 
 @Component({
   selector: '.messagesBox',
-  templateUrl: 'messages-box.component.html',
-  styleUrls: ['messages-box.component.css']
+  templateUrl: './messages-box.component.html',
+  styleUrls: ['./messages-box.component.css']
 })
 export class MessagesBoxComponent implements OnInit {
   // Declaring the variable for binding with initial value
