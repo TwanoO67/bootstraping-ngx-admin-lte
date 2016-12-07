@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: '.userBox',
-  templateUrl: 'user-box.component.html',
-  styleUrls: ['user-box.component.css']
+  templateUrl: './user-box.component.html',
+  styleUrls: ['./user-box.component.css']
 })
 export class UserBoxComponent implements OnInit {
     constructor(private auth: AuthService, private router: Router) {}
