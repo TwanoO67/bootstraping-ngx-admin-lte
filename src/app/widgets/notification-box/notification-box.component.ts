@@ -4,8 +4,8 @@ import {MessagesService} from "../../services/messages.service"
 
 @Component({
   selector: '.notificationsBox',
-  templateUrl: 'notification-box.component.html',
-  styleUrls: ['notification-box.component.css']
+  templateUrl: './notification-box.component.html',
+  styleUrls: ['./notification-box.component.css']
 })
 export class NotificationBoxComponent implements OnInit {
 
