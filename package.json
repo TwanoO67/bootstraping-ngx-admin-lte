@@ -13,14 +13,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^2.1.0",
-    "@angular/compiler": "^2.1.0",
-    "@angular/core": "^2.1.0",
-    "@angular/forms": "^2.1.0",
-    "@angular/http": "^2.1.0",
-    "@angular/platform-browser": "^2.1.0",
-    "@angular/platform-browser-dynamic": "^2.1.0",
-    "@angular/router": "3.0.0",
+    "@angular/common": "2.2.1",
+    "@angular/compiler": "2.2.1",
+    "@angular/core": "2.2.1",
+    "@angular/forms": "2.2.1",
+    "@angular/http": "2.2.1",
+    "@angular/platform-browser": "2.2.1",
+    "@angular/platform-browser-dynamic": "2.2.1",
+    "@angular/router": "3.2.1",
     "@types/chai": "^3.4.34",
     "admin-lte": "^2.3.8",
     "angular2-jwt": "^0.1.24",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/auth0-lock": "^10.0.20",
-    "angular-cli": "^1.0.0-beta.17",
+    "angular-cli": "^1.0.0-beta.20-2",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
@@ -52,6 +52,6 @@
     "protractor": "4.0.5",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
-    "typescript": "^2.0.3"
+    "typescript": "2.0.10"
   }
 }
