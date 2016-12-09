@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './models/user';
-import { UserService} from './services/user.service';
+import { UserService } from './services/user.service';
 import { Message } from './models/message';
 import { MessagesService } from './services/messages.service';
-import { ToasterService, ToasterConfig} from 'angular2-toaster/angular2-toaster';
+import { ToasterService, ToasterConfig } from 'angular2-toaster/angular2-toaster';
 
 @Component({
   selector: 'app-root',
@@ -25,10 +25,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // on envoi l'evenement resize, pour AdminLTE
     let ie = this.detectIE();
-    if(!ie) {
+    if (!ie) {
       window.dispatchEvent(new Event('resize'));
-    }
-    else {
+    } else {
       // solution for IE from @hakonamatata
       let event = document.createEvent('Event');
       event.initEvent('resize', false, true);
@@ -48,10 +47,10 @@ export class AppComponent implements OnInit {
       email: 'EMAIL',
       avatar_url: 'public/assets/img/user2-160x160.jpg'
     });
-    this._user_serv.setCurrentUser( user1 );
+    this._user_serv.setCurrentUser(user1);
 
     // envoi d'un message de test
-    this._msg_serv.addMessage( new Message({
+    this._msg_serv.addMessage(new Message({
       title: 'un message super important',
       content: 'le contenu d\'un message d\'une importance extreme',
       author: user2,
@@ -62,15 +61,16 @@ export class AppComponent implements OnInit {
   detectIE(): any {
     let ua = window.navigator.userAgent;
 
-// Test values; Uncomment to check result …
-// IE 10
-// ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
-// IE 11
-// ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
-// IE 12 / Spartan
-// ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
-// Edge (IE 12+)
-// ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+    // Test values; Uncomment to check result …
+    // IE 10
+    // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+    // IE 11
+    // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+    // IE 12 / Spartan
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+    // Edge (IE 12+)
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+    // Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
 
     let msie = ua.indexOf('MSIE ');
     if (msie > 0) {

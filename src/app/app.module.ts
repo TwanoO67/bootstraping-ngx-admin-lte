@@ -1,4 +1,4 @@
-//external module
+// external module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
-import {ToasterModule} from 'angular2-toaster/angular2-toaster';
+import { ToasterModule } from 'angular2-toaster/angular2-toaster';
 import { environment } from '../environments/environment';
 
 let modules = [
@@ -20,12 +20,14 @@ let modules = [
   ToasterModule
 ];
 
-import { AppHeaderComponent } from "./widgets/app-header";
-import { MenuAsideComponent } from "./widgets/menu-aside";
-import { MessagesBoxComponent} from "./widgets/messages-box";
-import { NotificationBoxComponent } from "./widgets/notification-box";
-import { TasksBoxComponent } from "./widgets/tasks-box";
-import { UserBoxComponent } from "./widgets/user-box"
+import { AppComponent } from './app.component';
+
+import { AppHeaderComponent } from './widgets/app-header';
+import { MenuAsideComponent } from './widgets/menu-aside';
+import { MessagesBoxComponent } from './widgets/messages-box';
+import { NotificationBoxComponent } from './widgets/notification-box';
+import { TasksBoxComponent } from './widgets/tasks-box';
+import { UserBoxComponent } from './widgets/user-box';
 
 let widgets = [
   AppComponent,
@@ -37,13 +39,13 @@ let widgets = [
   UserBoxComponent
 ];
 
-import { UserService } from "./services/user.service";
-import { MessagesService } from "./services/messages.service";
-import { AuthService } from "./services/auth.service";
+import { UserService } from './services/user.service';
+import { MessagesService } from './services/messages.service';
+import { AuthService } from './services/auth.service';
 import { CanActivateGuard } from './services/guard.service';
 import { NotificationService } from './services/notification.service';
 
-let services =  [
+let services = [
   UserService,
   MessagesService,
   AuthService,
@@ -59,10 +61,9 @@ let pages = [
   HomeComponent,
   PageNumComponent,
   ClientComponent,
-]
+];
 
-//main bootstrap
-import { AppComponent } from './app.component';
+// main bootstrap
 import { routing } from './app.routes';
 
 @NgModule({

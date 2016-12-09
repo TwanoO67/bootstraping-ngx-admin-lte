@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from "../../models/message";
-import {MessagesService} from "../../services/messages.service"
+import { Message } from '../../models/message';
+import { MessagesService } from '../../services/messages.service';
 
 @Component({
   selector: '.notificationsBox',
@@ -11,7 +11,7 @@ export class NotificationBoxComponent implements OnInit {
 
   private messages: Message[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
   }

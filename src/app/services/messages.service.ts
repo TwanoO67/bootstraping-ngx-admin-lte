@@ -1,8 +1,8 @@
-//based on https://github.com/ng-book/angular2-rxjs-chat/blob/master/app/ts/services/MessagesService.ts
-import {User} from "../models/user";
-import {Message} from "../models/message";
-import {Injectable} from '@angular/core';
-import {Observable, Subject, ReplaySubject} from 'rxjs/Rx';
+// based on https://github.com/ng-book/angular2-rxjs-chat/blob/master/app/ts/services/MessagesService.ts
+import { User } from '../models/user';
+import { Message } from '../models/message';
+import { Injectable } from '@angular/core';
+import { Observable, Subject, ReplaySubject } from 'rxjs/Rx';
 
 let initialMessages: Message[] = [];
 
@@ -26,29 +26,29 @@ export class MessagesService {
 
   // action streams
   public create: Subject<Message> = new Subject<Message>();
-  //public markThreadAsRead: Subject<any> = new Subject<any>();
+  // public markThreadAsRead: Subject<any> = new Subject<any>();
 
   constructor() {
-      //recois des operation, et les fais sur la liste interne, puis diffuse le resultat sur messages
-      this.updates.subscribe((ope) =>{
-        this.messagesList = ope(this.messagesList);
-        console.log(this.messagesList);
-        this.messages.next( this.messagesList );
-      });
+    // recois des operation, et les fais sur la liste interne, puis diffuse le resultat sur messages
+    this.updates.subscribe((ope) => {
+      this.messagesList = ope(this.messagesList);
+      console.log(this.messagesList);
+      this.messages.next(this.messagesList);
+    });
 
-      this.newMessages
-      .map( function(message: Message): IMessagesOperation {
+    this.newMessages
+      .map(function(message: Message): IMessagesOperation {
         return (messages: Message[]) => {
           return messages.concat(message);
         };
       })
       .subscribe(this.updates);
 
-    }
-
-    // an imperative function call to this action stream
-    addMessage(message: Message): void {
-      this.newMessages.next(message);
-    }
-
   }
+
+  // an imperative function call to this action stream
+  addMessage(message: Message): void {
+    this.newMessages.next(message);
+  }
+
+}

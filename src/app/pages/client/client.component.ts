@@ -18,7 +18,7 @@ export class ClientComponent implements OnInit {
     this.clients = this.dal.readAll();
   }
 
-  private save = (client: Client): void => {   
+  private save = (client: Client): void => {
     this.dal.update(client['$key'], new Client(client.name, client.clientId, client.address));
   }
 

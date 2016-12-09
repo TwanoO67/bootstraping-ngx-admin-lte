@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute}  from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-num',
@@ -14,10 +14,10 @@ export class PageNumComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    //when calling routes change
-    this._route.params.subscribe((data) =>{
+    // when calling routes change
+    this._route.params.subscribe((data) => {
       this.id = data['id'];
-    })
+    });
   }
 
 }

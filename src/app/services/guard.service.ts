@@ -4,15 +4,15 @@ import { AuthService } from './auth.service';
 
 @Injectable()
 export class CanActivateGuard implements CanActivate {
-	constructor(private auth: AuthService, private router: Router) {}
+  constructor(private auth: AuthService, private router: Router) { }
 
-	canActivate() {
-		let isAuth = this.auth.IsAuthenticated();
+  canActivate() {
+    let isAuth = this.auth.IsAuthenticated();
 
-		if (isAuth !== true) {
-			this.auth.Login();
-		}
+    if (isAuth !== true) {
+      this.auth.Login();
+    }
 
-		return isAuth;
-	}
+    return isAuth;
+  }
 }

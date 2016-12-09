@@ -25,6 +25,7 @@
     "admin-lte": "^2.3.8",
     "angular2-jwt": "^0.1.24",
     "angular2-toaster": "^1.0.2",
+    "angular2-uuid": "^1.1.0",
     "angularfire2": "^2.0.0-beta.6",
     "auth0-lock": "^10.4.0",
     "bootstrap": "^3.3.7",
@@ -38,9 +39,10 @@
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "@types/jasmine": "^2.2.30",
     "@types/auth0-lock": "^10.0.20",
+    "@types/jasmine": "^2.2.30",
     "angular-cli": "^1.0.0-beta.20-2",
+    "angular-ide": "^0.9.10",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",

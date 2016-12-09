@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Message} from "../../models/message";
+import { Message } from '../../models/message';
 
 @Component({
   selector: '.tasksBox',
@@ -10,7 +10,7 @@ import {Message} from "../../models/message";
 export class TasksBoxComponent implements OnInit {
   private messages: Message[];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
   }
