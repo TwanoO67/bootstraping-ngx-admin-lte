@@ -8,10 +8,10 @@ import { PageNumComponent } from './pages/page-num/page-num.component';
 import { ClientComponent } from './pages/client/client.component';
 
 const routes: Routes = [
-    // Root
-    { path: '', component: HomeComponent},
-    { path: 'page/:id', component: PageNumComponent, canActivate: [CanActivateGuard] },
-    { path: 'client', component: ClientComponent, canActivate: [CanActivateGuard] }
+  // Root
+  { path: '', component: HomeComponent },
+  { path: 'page/:id', component: PageNumComponent, canActivate: [CanActivateGuard] },
+  { path: 'client', component: ClientComponent, canActivate: [CanActivateGuard] }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

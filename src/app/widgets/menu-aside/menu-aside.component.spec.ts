@@ -15,14 +15,14 @@ describe('Component: MenuAside', () => {
   let builder: TestComponentBuilder;
 
   beforeEachProviders(() => [MenuAsideComponent]);
-  beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
+  beforeEach(inject([TestComponentBuilder], function(tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
   it('should inject the component', inject([MenuAsideComponent],
-      (component: MenuAsideComponent) => {
-    expect(component).toBeTruthy();
-  }));
+    (component: MenuAsideComponent) => {
+      expect(component).toBeTruthy();
+    }));
 
   it('should create the component', inject([], () => {
     return builder.createAsync(MenuAsideComponentTestController)

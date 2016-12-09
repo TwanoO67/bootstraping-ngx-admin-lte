@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MessagesService} from "../../services/messages.service"
-import {Message} from "../../models/message"
+import { MessagesService } from '../../services/messages.service';
+import { Message } from '../../models/message';
 
 @Component({
   selector: '.messagesBox',
@@ -9,17 +9,17 @@ import {Message} from "../../models/message"
 })
 export class MessagesBoxComponent implements OnInit {
   // Declaring the variable for binding with initial value
-    messages: Message[];
+  messages: Message[];
 
-    constructor( private _msg_serv:MessagesService ){
-      this.messages = [];
-    }
+  constructor(private _msg_serv: MessagesService) {
+    this.messages = [];
+  }
 
-    public ngOnInit(){
-      //à chaque modification de message on change nos données
-      this._msg_serv.messages.subscribe((msg: Message[])=>{
-        console.log('reception de message');
-        this.messages = msg;
-      });
-    }
+  public ngOnInit() {
+    // à chaque modification de message on change nos données
+    this._msg_serv.messages.subscribe((msg: Message[]) => {
+      console.log('reception de message');
+      this.messages = msg;
+    });
+  }
 }

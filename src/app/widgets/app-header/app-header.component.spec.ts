@@ -15,14 +15,14 @@ describe('Component: AppHeader', () => {
   let builder: TestComponentBuilder;
 
   beforeEachProviders(() => [AppHeaderComponent]);
-  beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
+  beforeEach(inject([TestComponentBuilder], function(tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
   it('should inject the component', inject([AppHeaderComponent],
-      (component: AppHeaderComponent) => {
-    expect(component).toBeTruthy();
-  }));
+    (component: AppHeaderComponent) => {
+      expect(component).toBeTruthy();
+    }));
 
   it('should create the component', inject([], () => {
     return builder.createAsync(AppHeaderComponentTestController)

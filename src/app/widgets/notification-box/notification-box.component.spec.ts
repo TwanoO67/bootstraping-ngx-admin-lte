@@ -15,14 +15,14 @@ describe('Component: NotificationBox', () => {
   let builder: TestComponentBuilder;
 
   beforeEachProviders(() => [NotificationBoxComponent]);
-  beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
+  beforeEach(inject([TestComponentBuilder], function(tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
   it('should inject the component', inject([NotificationBoxComponent],
-      (component: NotificationBoxComponent) => {
-    expect(component).toBeTruthy();
-  }));
+    (component: NotificationBoxComponent) => {
+      expect(component).toBeTruthy();
+    }));
 
   it('should create the component', inject([], () => {
     return builder.createAsync(NotificationBoxComponentTestController)
