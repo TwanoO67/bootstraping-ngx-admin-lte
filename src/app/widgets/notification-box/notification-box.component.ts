@@ -13,9 +13,12 @@ export class NotificationBoxComponent implements OnInit {
 
   private messages: Message[];
 
-  constructor() { }
+  constructor() {
+    // TODO 
+  }
 
   public ngOnInit() {
+    // TODO
   }
 
 }

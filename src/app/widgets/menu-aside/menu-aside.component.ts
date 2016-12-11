@@ -71,7 +71,7 @@ export class MenuAsideComponent implements OnInit {
   }
 
   public ngOnInit() {
-
+    // TODO
   }
 
 }

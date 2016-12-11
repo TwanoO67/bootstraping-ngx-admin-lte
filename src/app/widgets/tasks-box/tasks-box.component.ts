@@ -13,9 +13,12 @@ export class TasksBoxComponent implements OnInit {
   private messages: Message[];
   @Input() public user;
 
-  constructor() { }
+  constructor() {
+    // TODO 
+  }
 
   public ngOnInit() {
+    // TODO
   }
 
 }

@@ -10,10 +10,12 @@ import { Router } from '@angular/router';
   templateUrl: './user-box.component.html'
 })
 export class UserBoxComponent implements OnInit {
-  constructor(private auth: AuthService, private router: Router) { }
+  constructor(private auth: AuthService, private router: Router) {
+    // TODO
+  }
 
   public ngOnInit() {
-
+    // TODO
   }
 
   private logout = (): void => {
