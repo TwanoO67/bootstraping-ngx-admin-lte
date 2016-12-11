@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Message } from '../../models/message';
 
 @Component({
-  inputs: ['user'],
   /* tslint:disable */
   selector: '.tasksBox',
   /* tslint:enable */
@@ -10,7 +9,9 @@ import { Message } from '../../models/message';
   templateUrl: './tasks-box.component.html'
 })
 export class TasksBoxComponent implements OnInit {
+
   private messages: Message[];
+  @Input() public user;
 
   constructor() { }
 
