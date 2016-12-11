@@ -22,19 +22,19 @@ export class ClientDAL {
 
   public create = (newClient: Client): void => {
     this.af.database.list('clients').push(newClient).then(resp =>
-      this.notif.Success('New client has been added')
+      this.notif.success('New client has been added')
     );
   }
 
   public update = (id: string, client: Client): void => {
     this.af.database.list('clients').update(id, client).then(resp =>
-      this.notif.Success('Client ' + client.name + ' has been updated')
+      this.notif.success('Client ' + client.name + ' has been updated')
     );
   }
 
   public delete = (client: Client): void => {
     this.af.database.list('clients').remove(client as any).then(resp =>
-      this.notif.Success('Client ' + client.name + ' has been deleted')
+      this.notif.success('Client ' + client.name + ' has been deleted')
     );
   }
 }

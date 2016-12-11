@@ -11,13 +11,13 @@ export class MessagesBoxComponent implements OnInit {
   // Declaring the variable for binding with initial value
   private messages: Message[];
 
-  constructor(private _msg_serv: MessagesService) {
+  constructor(private msgServ: MessagesService) {
     this.messages = [];
   }
 
   public ngOnInit() {
     // à chaque modification de message on change nos données
-    this._msg_serv.messages.subscribe((msg: Message[]) => {
+    this.msgServ.messages.subscribe((msg: Message[]) => {
       console.log('reception de message');
       this.messages = msg;
     });

@@ -7,10 +7,10 @@ export class CanActivateGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router) { }
 
   public canActivate() {
-    let isAuth = this.auth.IsAuthenticated();
+    let isAuth = this.auth.isAuthenticated();
 
     if (isAuth !== true) {
-      this.auth.Login();
+      this.auth.login();
     }
 
     return isAuth;

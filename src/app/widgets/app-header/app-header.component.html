@@ -13,7 +13,7 @@
 		</a>
 		<!-- Navbar Right Menu -->
 		<div class="navbar-custom-menu">
-			<ul class="nav navbar-nav" *ngIf="auth.IsAuthenticated()">
+			<ul class="nav navbar-nav" *ngIf="auth.isAuthenticated()">
 				<!-- Messages: style can be found in dropdown.less-->
 				<li class="dropdown messages-menu messagesBox"></li>
 				<!-- Notifications Menu -->
@@ -26,8 +26,8 @@
 				<li><a href="#" data-toggle="control-sidebar"
 					class="toggle-sidebar-right"><i class="fa fa-gears"></i></a></li>
 			</ul>
-			<ul class="nav navbar-nav" *ngIf="!auth.IsAuthenticated()">
-				<li><a href="#" (click)="auth.Login()"><i
+			<ul class="nav navbar-nav" *ngIf="!auth.isAuthenticated()">
+				<li><a href="#" (click)="auth.login()"><i
 						class="fa fa-sign-in"></i> Login</a></li>
 			</ul>
 		</div>

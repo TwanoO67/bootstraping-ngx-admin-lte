@@ -11,13 +11,13 @@ export class PageNumComponent implements OnInit, OnDestroy {
   private sub: any;
 
   constructor(
-    private _route: ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
   public ngOnInit() {
     // when calling routes change
     let idkey = 'id';
-    this.sub = this._route.params.subscribe((data) => {
+    this.sub = this.route.params.subscribe((data) => {
       this.id = data[idkey];
     });
   }

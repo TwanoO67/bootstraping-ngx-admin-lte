@@ -7,7 +7,7 @@ export class Client {
 
   constructor(name?: string, clientId?: string, adress?: string) {
     this.name = name || '';
-    this.clientId = clientId || GuidHelper.GenerateGUID();
+    this.clientId = clientId || GuidHelper.generateGUID();
     this.address = adress || '';
   }
 }

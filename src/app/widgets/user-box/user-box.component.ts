@@ -14,8 +14,8 @@ export class UserBoxComponent implements OnInit {
 
   }
 
-  private Logout = (): void => {
+  private logout = (): void => {
     this.router.navigate(['/']);
-    this.auth.Logout();
+    this.auth.logout();
   }
 }
