@@ -36,7 +36,7 @@ describe('Component: AppHeader', () => {
 
 @Component({
   directives: [AppHeaderComponent],
-  selector: 'test',
+  selector: 'app-test',
   template: `
     <app-header></app-header>
   `

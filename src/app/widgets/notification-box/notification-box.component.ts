@@ -3,7 +3,9 @@ import { Message } from '../../models/message';
 import { MessagesService } from '../../services/messages.service';
 
 @Component({
+  /* tslint:disable */
   selector: '.notificationsBox',
+  /* tslint:enable */
   styleUrls: ['./notification-box.component.css'],
   templateUrl: './notification-box.component.html'
 })

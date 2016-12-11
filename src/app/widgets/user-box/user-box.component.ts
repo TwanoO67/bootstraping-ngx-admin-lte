@@ -3,7 +3,9 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
+  /* tslint:disable */
   selector: '.userBox',
+  /* tslint:enable */
   styleUrls: ['./user-box.component.css'],
   templateUrl: './user-box.component.html'
 })

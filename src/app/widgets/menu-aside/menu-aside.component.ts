@@ -5,7 +5,7 @@ import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'menu-aside',
+  selector: 'app-menu-aside',
   styleUrls: ['./menu-aside.component.css'],
   templateUrl: './menu-aside.component.html'
 })

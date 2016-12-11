@@ -36,7 +36,7 @@ describe('Component: MenuAside', () => {
 
 @Component({
   directives: [MenuAsideComponent],
-  selector: 'test',
+  selector: 'app-test',
   template: `
     <app-menu-aside></app-menu-aside>
   `

@@ -125,7 +125,7 @@
 
 		"component-selector-prefix": 
 		[
-			false,
+			true,
 			"app"
 		],
 

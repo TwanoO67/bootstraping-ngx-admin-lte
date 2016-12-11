@@ -36,11 +36,12 @@ describe('Component: MessagesBox', () => {
 
 @Component({
   directives: [MessagesBoxComponent],
+  /* tslint:disable */
   selector: 'test',
+  /* tslint:enable */
   template: `
     <app-messages-box></app-messages-box>
   `
 })
 class MessagesBoxComponentTestController {
 }
-
