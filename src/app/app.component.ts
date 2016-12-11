@@ -11,7 +11,7 @@ import { ToasterService, ToasterConfig } from 'angular2-toaster/angular2-toaster
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  private title = 'app works!';
   private toastrConfig: ToasterConfig;
 
   constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     // on envoi l'evenement resize, pour AdminLTE
     let ie = this.detectIE();
     if (!ie) {
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
     }));
   }
 
-  detectIE(): any {
+  protected detectIE(): any {
     let ua = window.navigator.userAgent;
 
     // Test values; Uncomment to check result …

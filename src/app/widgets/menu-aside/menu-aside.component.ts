@@ -70,7 +70,7 @@ export class MenuAsideComponent implements OnInit {
     this.router.events.subscribe((evt) => this.current_url = evt.url);
   }
 
-  ngOnInit() {
+  public ngOnInit() {
 
   }
 

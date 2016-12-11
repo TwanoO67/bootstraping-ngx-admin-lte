@@ -30,7 +30,7 @@
 			140
 		],
 
-		"member-access": false,
+		"member-access": true,
 		"member-ordering": 
 		[
 			true,

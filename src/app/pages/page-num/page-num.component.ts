@@ -13,7 +13,7 @@ export class PageNumComponent implements OnInit {
     private _route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     // when calling routes change
     this._route.params.subscribe((data) => {
       this.id = data['id'];

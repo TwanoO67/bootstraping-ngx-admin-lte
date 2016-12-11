@@ -9,7 +9,7 @@ import { Message } from '../../models/message';
 })
 export class MessagesBoxComponent implements OnInit {
   // Declaring the variable for binding with initial value
-  messages: Message[];
+  private messages: Message[];
 
   constructor(private _msg_serv: MessagesService) {
     this.messages = [];

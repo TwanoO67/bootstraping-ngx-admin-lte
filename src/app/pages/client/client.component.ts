@@ -14,7 +14,7 @@ export class ClientComponent implements OnInit {
 
   constructor(private dal: ClientDAL) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.clients = this.dal.readAll();
   }
 

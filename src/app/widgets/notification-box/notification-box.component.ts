@@ -13,7 +13,7 @@ export class NotificationBoxComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }

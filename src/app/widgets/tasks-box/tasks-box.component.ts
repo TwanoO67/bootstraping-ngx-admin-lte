@@ -12,7 +12,7 @@ export class TasksBoxComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }
