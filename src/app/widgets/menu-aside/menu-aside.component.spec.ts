@@ -41,6 +41,8 @@ describe('Component: MenuAside', () => {
     <app-menu-aside></app-menu-aside>
   `
 })
+/* tslint:disable */
 class MenuAsideComponentTestController {
 }
+/* tslint:enable */
 

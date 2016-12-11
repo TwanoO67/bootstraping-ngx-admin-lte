@@ -41,5 +41,7 @@ describe('Component: AppHeader', () => {
     <app-header></app-header>
   `
 })
+/* tslint:disable */
 class AppHeaderComponentTestController {
 }
+/* tslint:enable */

@@ -43,6 +43,8 @@ describe('Component: UserBox', () => {
     <app-user-box></app-user-box>
   `
 })
+/* tslint:disable */
 class UserBoxComponentTestController {
 }
+/* tslint:enable */
 

@@ -43,6 +43,8 @@ describe('Component: TasksBox', () => {
     <app-tasks-box></app-tasks-box>
   `
 })
+/* tslint:disable */
 class TasksBoxComponentTestController {
 }
+/* tslint:enable */
 

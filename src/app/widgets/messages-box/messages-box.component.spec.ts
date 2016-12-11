@@ -43,5 +43,7 @@ describe('Component: MessagesBox', () => {
     <app-messages-box></app-messages-box>
   `
 })
+/* tslint:disable */
 class MessagesBoxComponentTestController {
 }
+/* tslint:enable */

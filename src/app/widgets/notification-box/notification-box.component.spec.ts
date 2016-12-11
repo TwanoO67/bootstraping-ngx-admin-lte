@@ -43,6 +43,8 @@ describe('Component: NotificationBox', () => {
     <app-notification-box></app-notification-box>
   `
 })
+/* tslint:disable */
 class NotificationBoxComponentTestController {
 }
+/* tslint:enable */
 
