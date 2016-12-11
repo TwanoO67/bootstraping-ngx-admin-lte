@@ -9,9 +9,20 @@ import { ClientComponent } from './pages/client/client.component';
 
 const routes: Routes = [
   // Root
-  { path: '', component: HomeComponent },
-  { path: 'page/:id', component: PageNumComponent, canActivate: [CanActivateGuard] },
-  { path: 'client', component: ClientComponent, canActivate: [CanActivateGuard] }
+  {
+    component: HomeComponent,
+    path: ''
+  },
+  {
+    canActivate: [CanActivateGuard],
+    component: PageNumComponent,
+    path: 'page/:id'
+  },
+  {
+    canActivate: [CanActivateGuard],
+    component: ClientComponent,
+    path: 'client'
+  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

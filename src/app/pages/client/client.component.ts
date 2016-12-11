@@ -4,22 +4,22 @@ import { Client } from '../../models/client';
 import { ClientDAL } from '../../dal/client.dal';
 
 @Component({
+  providers: [ClientDAL],
   selector: 'app-client',
-  templateUrl: './client.component.html',
   styleUrls: ['./client.component.css'],
-  providers: [ClientDAL]
+  templateUrl: './client.component.html'
 })
 export class ClientComponent implements OnInit {
   private clients: FirebaseListObservable<Array<Client>>;
 
   constructor(private dal: ClientDAL) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.clients = this.dal.readAll();
   }
 
   private save = (client: Client): void => {
-    this.dal.update(client['$key'], new Client(client.name, client.clientId, client.address));
+    this.dal.update(client.clientId, new Client(client.name, client.clientId, client.address));
   }
 
   private delete = (client: Client): void => {

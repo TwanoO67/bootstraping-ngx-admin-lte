@@ -6,11 +6,11 @@ import { AuthService } from './auth.service';
 export class CanActivateGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router) { }
 
-  canActivate() {
-    let isAuth = this.auth.IsAuthenticated();
+  public canActivate() {
+    let isAuth = this.auth.isAuthenticated();
 
     if (isAuth !== true) {
-      this.auth.Login();
+      this.auth.login();
     }
 
     return isAuth;

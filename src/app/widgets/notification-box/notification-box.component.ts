@@ -3,17 +3,22 @@ import { Message } from '../../models/message';
 import { MessagesService } from '../../services/messages.service';
 
 @Component({
+  /* tslint:disable */
   selector: '.notificationsBox',
-  templateUrl: './notification-box.component.html',
-  styleUrls: ['./notification-box.component.css']
+  /* tslint:enable */
+  styleUrls: ['./notification-box.component.css'],
+  templateUrl: './notification-box.component.html'
 })
 export class NotificationBoxComponent implements OnInit {
 
   private messages: Message[];
 
-  constructor() { }
+  constructor() {
+    // TODO 
+  }
 
-  ngOnInit() {
+  public ngOnInit() {
+    // TODO
   }
 
 }

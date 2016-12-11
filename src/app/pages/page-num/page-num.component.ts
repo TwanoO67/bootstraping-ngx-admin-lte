@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-page-num',
-  templateUrl: './page-num.component.html',
-  styleUrls: ['./page-num.component.css']
+  styleUrls: ['./page-num.component.css'],
+  templateUrl: './page-num.component.html'
 })
-export class PageNumComponent implements OnInit {
+export class PageNumComponent implements OnInit, OnDestroy {
   private id: number = 0;
+  private sub: any;
 
   constructor(
-    private _route: ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     // when calling routes change
-    this._route.params.subscribe((data) => {
-      this.id = data['id'];
+    let idkey = 'id';
+    this.sub = this.route.params.subscribe((data) => {
+      this.id = data[idkey];
     });
   }
-
+  public ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
 }

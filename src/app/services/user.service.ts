@@ -4,11 +4,13 @@ import { Observable, ReplaySubject } from 'rxjs/Rx';
 
 @Injectable()
 export class UserService {
-  public current_user: ReplaySubject<User> = new ReplaySubject<User>(1);
+  public currentUser: ReplaySubject<User> = new ReplaySubject<User>(1);
 
-  constructor() { }
+  constructor() {
+    // TODO 
+  }
 
   public setCurrentUser(user: User) {
-    this.current_user.next(user);
+    this.currentUser.next(user);
   }
 }

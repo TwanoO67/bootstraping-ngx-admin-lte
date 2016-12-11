@@ -35,12 +35,14 @@ describe('Component: MenuAside', () => {
 });
 
 @Component({
-  selector: 'test',
+  directives: [MenuAsideComponent],
+  selector: 'app-test',
   template: `
     <app-menu-aside></app-menu-aside>
-  `,
-  directives: [MenuAsideComponent]
+  `
 })
+/* tslint:disable */
 class MenuAsideComponentTestController {
 }
+/* tslint:enable */
 

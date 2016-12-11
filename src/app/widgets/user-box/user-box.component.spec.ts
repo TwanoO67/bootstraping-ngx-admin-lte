@@ -35,12 +35,16 @@ describe('Component: UserBox', () => {
 });
 
 @Component({
+  directives: [UserBoxComponent],
+  /* tslint:disable */
   selector: 'test',
+  /* tslint:enable */
   template: `
     <app-user-box></app-user-box>
-  `,
-  directives: [UserBoxComponent]
+  `
 })
+/* tslint:disable */
 class UserBoxComponentTestController {
 }
+/* tslint:enable */
 

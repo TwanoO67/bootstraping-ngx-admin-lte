@@ -35,12 +35,16 @@ describe('Component: NotificationBox', () => {
 });
 
 @Component({
+  directives: [NotificationBoxComponent],
+  /* tslint:disable */
   selector: 'test',
+  /* tslint:enable */
   template: `
     <app-notification-box></app-notification-box>
-  `,
-  directives: [NotificationBoxComponent]
+  `
 })
+/* tslint:disable */
 class NotificationBoxComponentTestController {
 }
+/* tslint:enable */
 

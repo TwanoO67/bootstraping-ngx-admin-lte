@@ -11,18 +11,18 @@ import { ToasterService, ToasterConfig } from 'angular2-toaster/angular2-toaster
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
+  private title = 'app works!';
   private toastrConfig: ToasterConfig;
 
-  constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {
+  constructor(private userServ: UserService, private msgServ: MessagesService, private toastr: ToasterService) {
     this.toastrConfig = new ToasterConfig({
-      showCloseButton: true,
       newestOnTop: true,
+      showCloseButton: true,
       tapToDismiss: false
     });
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     // on envoi l'evenement resize, pour AdminLTE
     let ie = this.detectIE();
     if (!ie) {
@@ -36,29 +36,29 @@ export class AppComponent implements OnInit {
 
     // envoi d'un user de test
     let user1 = new User({
-      firstname: 'WEBER',
-      lastname: 'Antoine',
+      avatarUrl: 'public/assets/img/user2-160x160.jpg',
       email: 'weber.antoine.pro@gmail.com',
-      avatar_url: 'public/assets/img/user2-160x160.jpg'
+      firstname: 'WEBER',
+      lastname: 'Antoine'
     });
     let user2 = new User({
-      firstname: 'FIRSTNAME',
-      lastname: 'LASTNAME',
+      avatarUrl: 'public/assets/img/user2-160x160.jpg',
       email: 'EMAIL',
-      avatar_url: 'public/assets/img/user2-160x160.jpg'
+      firstname: 'FIRSTNAME',
+      lastname: 'LASTNAME'
     });
-    this._user_serv.setCurrentUser(user1);
+    this.userServ.setCurrentUser(user1);
 
     // envoi d'un message de test
-    this._msg_serv.addMessage(new Message({
-      title: 'un message super important',
-      content: 'le contenu d\'un message d\'une importance extreme',
+    this.msgServ.addMessage(new Message({
       author: user2,
-      destination: user1
+      content: 'le contenu d\'un message d\'une importance extreme',
+      destination: user1,
+      title: 'un message super important'
     }));
   }
 
-  detectIE(): any {
+  protected detectIE(): any {
     let ua = window.navigator.userAgent;
 
     // Test values; Uncomment to check result …

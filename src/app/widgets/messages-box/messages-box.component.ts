@@ -3,21 +3,23 @@ import { MessagesService } from '../../services/messages.service';
 import { Message } from '../../models/message';
 
 @Component({
+  /* tslint:disable */
   selector: '.messagesBox',
-  templateUrl: './messages-box.component.html',
-  styleUrls: ['./messages-box.component.css']
+  /* tslint:enable */
+  styleUrls: ['./messages-box.component.css'],
+  templateUrl: './messages-box.component.html'
 })
 export class MessagesBoxComponent implements OnInit {
   // Declaring the variable for binding with initial value
-  messages: Message[];
+  private messages: Message[];
 
-  constructor(private _msg_serv: MessagesService) {
+  constructor(private msgServ: MessagesService) {
     this.messages = [];
   }
 
   public ngOnInit() {
     // à chaque modification de message on change nos données
-    this._msg_serv.messages.subscribe((msg: Message[]) => {
+    this.msgServ.messages.subscribe((msg: Message[]) => {
       console.log('reception de message');
       this.messages = msg;
     });

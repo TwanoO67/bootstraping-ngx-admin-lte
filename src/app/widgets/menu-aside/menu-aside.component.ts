@@ -5,12 +5,12 @@ import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'menu-aside',
-  templateUrl: './menu-aside.component.html',
-  styleUrls: ['./menu-aside.component.css']
+  selector: 'app-menu-aside',
+  styleUrls: ['./menu-aside.component.css'],
+  templateUrl: './menu-aside.component.html'
 })
 export class MenuAsideComponent implements OnInit {
-  private current_url: string;
+  private currentUrl: string;
   private links: Array<any> = [
     {
       'title': 'Home',
@@ -65,13 +65,13 @@ export class MenuAsideComponent implements OnInit {
     }
   ];
 
-  constructor(private _user_serv: UserService, public router: Router, private auth: AuthService) {
+  constructor(private userServ: UserService, public router: Router, private auth: AuthService) {
     // recuperation de l'url courrante
-    this.router.events.subscribe((evt) => this.current_url = evt.url);
+    this.router.events.subscribe((evt) => this.currentUrl = evt.url);
   }
 
-  ngOnInit() {
-
+  public ngOnInit() {
+    // TODO
   }
 
 }

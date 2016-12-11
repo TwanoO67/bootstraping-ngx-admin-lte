@@ -67,6 +67,7 @@ let pages = [
 import { routing } from './app.routes';
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     ...widgets,
     ...pages
@@ -77,7 +78,6 @@ import { routing } from './app.routes';
   ],
   providers: [
     ...services
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
 export class AppModule { }

@@ -35,12 +35,16 @@ describe('Component: TasksBox', () => {
 });
 
 @Component({
+  directives: [TasksBoxComponent],
+  /* tslint:disable */
   selector: 'test',
+  /* tslint:enable */
   template: `
     <app-tasks-box></app-tasks-box>
-  `,
-  directives: [TasksBoxComponent]
+  `
 })
+/* tslint:disable */
 class TasksBoxComponentTestController {
 }
+/* tslint:enable */
 

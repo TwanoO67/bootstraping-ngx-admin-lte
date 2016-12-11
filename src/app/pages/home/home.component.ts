@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
   public date: Date = new Date();
 
-  constructor() { }
+  constructor() {
+    // TODO 
+  }
 
-  ngOnInit() {
+  public ngOnInit() {
+    // TODO
   }
 
 }

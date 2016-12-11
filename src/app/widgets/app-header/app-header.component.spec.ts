@@ -35,11 +35,13 @@ describe('Component: AppHeader', () => {
 });
 
 @Component({
-  selector: 'test',
+  directives: [AppHeaderComponent],
+  selector: 'app-test',
   template: `
     <app-header></app-header>
-  `,
-  directives: [AppHeaderComponent]
+  `
 })
+/* tslint:disable */
 class AppHeaderComponentTestController {
 }
+/* tslint:enable */
