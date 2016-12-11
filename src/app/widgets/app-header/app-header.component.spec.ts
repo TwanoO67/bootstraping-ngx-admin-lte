@@ -35,11 +35,11 @@ describe('Component: AppHeader', () => {
 });
 
 @Component({
+  directives: [AppHeaderComponent],
   selector: 'test',
   template: `
     <app-header></app-header>
-  `,
-  directives: [AppHeaderComponent]
+  `
 })
 class AppHeaderComponentTestController {
 }

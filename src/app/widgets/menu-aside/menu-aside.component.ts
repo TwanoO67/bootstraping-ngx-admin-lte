@@ -6,8 +6,8 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'menu-aside',
-  templateUrl: './menu-aside.component.html',
-  styleUrls: ['./menu-aside.component.css']
+  styleUrls: ['./menu-aside.component.css'],
+  templateUrl: './menu-aside.component.html'
 })
 export class MenuAsideComponent implements OnInit {
   private current_url: string;

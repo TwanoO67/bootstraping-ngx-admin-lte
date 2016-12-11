@@ -13,7 +13,7 @@ export class AuthService {
 
   constructor(private af: AngularFire, private notif: NotificationService) {
     this.lock = new Auth0Lock(environment.auth0.clientID, environment.auth0.domain, this.GenerateLockOption());
-    this.auth = new Auth0({ domain: environment.auth0.domain, clientID: environment.auth0.clientID, callbackURL: '' });
+    this.auth = new Auth0({ callbackURL: '', clientID: environment.auth0.clientID, domain: environment.auth0.domain });
     this.profile = this.GetProfile();
 
     this.lock.on('authenticated', (authResult: any): void => {
@@ -32,7 +32,7 @@ export class AuthService {
                 this.notif.Error(err.message);
               } else {
                 this.af.auth.login(token.id_token, {
-                  provider: AuthProviders.Custom, method: AuthMethods.CustomToken
+                  method: AuthMethods.CustomToken, provider: AuthProviders.Custom
                 }).then((resp: any): void => {
                   // this.notif.Success('You successfully loged in');
                 }, (err: Error): void => {
@@ -100,8 +100,8 @@ export class AuthService {
 
   private GenerateAuthOption = (token: string): any => {
     return {
-      id_token: token,
       api: 'firebase',
+      id_token: token,
       scope: 'openid name email displayName',
       target: 'uyZPfupm9XEM2jdDwiz9xGmvDnly5ydU'
     };

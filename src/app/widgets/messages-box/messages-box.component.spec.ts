@@ -35,11 +35,11 @@ describe('Component: MessagesBox', () => {
 });
 
 @Component({
+  directives: [MessagesBoxComponent],
   selector: 'test',
   template: `
     <app-messages-box></app-messages-box>
-  `,
-  directives: [MessagesBoxComponent]
+  `
 })
 class MessagesBoxComponentTestController {
 }

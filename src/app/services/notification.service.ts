@@ -6,14 +6,14 @@ export class NotificationService {
   constructor(private toastr: ToasterService) { }
 
   public Success = (body: string, title = 'Operation successful'): void => {
-    this.toastr.pop({ title: title, body: body, type: 'success' });
+    this.toastr.pop({ body: body, title: title, type: 'success' });
   }
 
   public Error = (body: string, title = 'An error occured'): void => {
-    this.toastr.pop({ title: title, body: body, type: 'error' });
+    this.toastr.pop({ body: body, title: title, type: 'error' });
   }
 
   public Warning = (body: string, title = 'Something went wrong'): void => {
-    this.toastr.pop({ title: title, body: body, type: 'warning' });
+    this.toastr.pop({ body: body, title: title, type: 'warning' });
   }
 }

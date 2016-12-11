@@ -35,11 +35,11 @@ describe('Component: MenuAside', () => {
 });
 
 @Component({
+  directives: [MenuAsideComponent],
   selector: 'test',
   template: `
     <app-menu-aside></app-menu-aside>
-  `,
-  directives: [MenuAsideComponent]
+  `
 })
 class MenuAsideComponentTestController {
 }

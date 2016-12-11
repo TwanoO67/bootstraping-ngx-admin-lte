@@ -35,11 +35,11 @@ describe('Component: UserBox', () => {
 });
 
 @Component({
+  directives: [UserBoxComponent],
   selector: 'test',
   template: `
     <app-user-box></app-user-box>
-  `,
-  directives: [UserBoxComponent]
+  `
 })
 class UserBoxComponentTestController {
 }

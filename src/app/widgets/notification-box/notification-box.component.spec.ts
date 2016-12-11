@@ -35,11 +35,11 @@ describe('Component: NotificationBox', () => {
 });
 
 @Component({
+  directives: [NotificationBoxComponent],
   selector: 'test',
   template: `
     <app-notification-box></app-notification-box>
-  `,
-  directives: [NotificationBoxComponent]
+  `
 })
 class NotificationBoxComponentTestController {
 }

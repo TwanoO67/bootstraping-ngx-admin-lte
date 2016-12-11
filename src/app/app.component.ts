@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
 
   constructor(private _user_serv: UserService, private _msg_serv: MessagesService, private _toastr: ToasterService) {
     this.toastrConfig = new ToasterConfig({
-      showCloseButton: true,
       newestOnTop: true,
+      showCloseButton: true,
       tapToDismiss: false
     });
   }
@@ -36,25 +36,25 @@ export class AppComponent implements OnInit {
 
     // envoi d'un user de test
     let user1 = new User({
-      firstname: 'WEBER',
-      lastname: 'Antoine',
+      avatar_url: 'public/assets/img/user2-160x160.jpg',
       email: 'weber.antoine.pro@gmail.com',
-      avatar_url: 'public/assets/img/user2-160x160.jpg'
+      firstname: 'WEBER',
+      lastname: 'Antoine'
     });
     let user2 = new User({
-      firstname: 'FIRSTNAME',
-      lastname: 'LASTNAME',
+      avatar_url: 'public/assets/img/user2-160x160.jpg',
       email: 'EMAIL',
-      avatar_url: 'public/assets/img/user2-160x160.jpg'
+      firstname: 'FIRSTNAME',
+      lastname: 'LASTNAME'
     });
     this._user_serv.setCurrentUser(user1);
 
     // envoi d'un message de test
     this._msg_serv.addMessage(new Message({
-      title: 'un message super important',
-      content: 'le contenu d\'un message d\'une importance extreme',
       author: user2,
-      destination: user1
+      content: 'le contenu d\'un message d\'une importance extreme',
+      destination: user1,
+      title: 'un message super important'
     }));
   }
 

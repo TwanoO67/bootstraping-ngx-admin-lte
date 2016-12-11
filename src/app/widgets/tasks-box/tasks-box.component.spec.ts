@@ -35,11 +35,11 @@ describe('Component: TasksBox', () => {
 });
 
 @Component({
+  directives: [TasksBoxComponent],
   selector: 'test',
   template: `
     <app-tasks-box></app-tasks-box>
-  `,
-  directives: [TasksBoxComponent]
+  `
 })
 class TasksBoxComponentTestController {
 }
