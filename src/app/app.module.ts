@@ -28,9 +28,11 @@ import { MessagesBoxComponent } from './widgets/messages-box';
 import { NotificationBoxComponent } from './widgets/notification-box';
 import { TasksBoxComponent } from './widgets/tasks-box';
 import { UserBoxComponent } from './widgets/user-box';
+import { BreadcrumbComponent } from './widgets/breadcrumb';
 
 let widgets = [
   AppComponent,
+  BreadcrumbComponent,
   AppHeaderComponent,
   MenuAsideComponent,
   MessagesBoxComponent,
@@ -44,9 +46,11 @@ import { MessagesService } from './services/messages.service';
 import { AuthService } from './services/auth.service';
 import { CanActivateGuard } from './services/guard.service';
 import { NotificationService } from './services/notification.service';
+import { BreadcrumbService } from './services/breadcrumb.service';
 
 let services = [
   UserService,
+  BreadcrumbService,
   MessagesService,
   AuthService,
   CanActivateGuard,
