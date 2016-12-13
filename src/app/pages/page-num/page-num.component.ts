@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-page-num',
@@ -11,7 +12,8 @@ export class PageNumComponent implements OnInit, OnDestroy {
   private sub: any;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private breadServ: BreadcrumbService
   ) { }
 
   public ngOnInit() {
@@ -20,7 +22,27 @@ export class PageNumComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe((data) => {
       this.id = data[idkey];
     });
+
+    // changing header
+    this.breadServ.set({
+      description: 'This is our ' + idkey + ' pages',
+      display: true,
+      header : 'Dashboard',
+      levels: [
+        {
+          icon: 'dashboard',
+          link: ['/'],
+          title: 'Home'
+        },
+        {
+          icon: 'clock-o',
+          link: [ '/page/' + idkey ],
+          title: 'Page' + idkey
+        }
+      ]
+    });
   }
+
   public ngOnDestroy() {
     this.sub.unsubscribe();
   }

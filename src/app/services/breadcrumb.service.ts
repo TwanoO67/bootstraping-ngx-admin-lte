@@ -12,8 +12,8 @@ export class BreadcrumbService {
     levels: [
       {
         icon: 'clock-o',
-        link: '/',
-        title: 'Timeline'
+        link: ['/'],
+        title: 'Default'
       }
     ]
   };

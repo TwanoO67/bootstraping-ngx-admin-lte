@@ -6,7 +6,7 @@
   <ol class="breadcrumb">
     <template let-item ngFor [ngForOf]="levels">
       <li [class.active]="item.active">
-        <a routerLink="item.link">
+        <a [routerLink]="item.link">
           <i class="fa fa-{{item.icon}}"></i> {{ item.title }}
         </a>
       </li>
