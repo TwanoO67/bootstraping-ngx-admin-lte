@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2';
 import { Client } from '../../models/client';
 import { ClientDAL } from '../../dal/client.dal';
+import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
   providers: [ClientDAL],
@@ -9,13 +10,37 @@ import { ClientDAL } from '../../dal/client.dal';
   styleUrls: ['./client.component.css'],
   templateUrl: './client.component.html'
 })
-export class ClientComponent implements OnInit {
+export class ClientComponent implements OnInit, OnDestroy {
   private clients: FirebaseListObservable<Array<Client>>;
 
-  constructor(private dal: ClientDAL) { }
+  constructor(private dal: ClientDAL, private breadServ: BreadcrumbService) {
+    // TODO
+  }
 
   public ngOnInit() {
     this.clients = this.dal.readAll();
+    this.breadServ.set({
+      description: 'This is our Client page',
+      display: true,
+      levels: [
+        {
+          icon: 'dashboard',
+          link: ['/'],
+          title: 'Home'
+        },
+        {
+          icon: 'clock-o',
+          link: ['/client'],
+          title: 'Client'
+        }
+      ]
+    });
+
+  }
+
+  public ngOnDestroy() {
+    this.breadServ.clear();
+    this.clients = null;
   }
 
   private save = (client: Client): void => {
