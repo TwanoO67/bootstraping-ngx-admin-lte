@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public date: Date = new Date();
 
   constructor(private breadServ: BreadcrumbService) {
+    // TODO
   }
 
   public ngOnInit() {
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.breadServ.set({
       description: 'HomePage',
       display: true,
-      header : 'Dashboard',
+      header: 'Dashboard',
       levels: [
         {
           icon: 'dashboard',
