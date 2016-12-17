@@ -4,7 +4,7 @@
 	[innerHTML]="messages.length"></span>
 </a>
 <ul class="dropdown-menu">
-	<li class="header">You have {{messages.length}} messages</li>
+	<li class="header">{{ 'MSGBOX.COUNT' | translate:msgLength }}</li>
 	<li>
 		<!-- inner menu: contains the messages -->
 		<ul class="menu">
@@ -25,5 +25,6 @@
 			<!-- end message -->
 		</ul> <!-- /.menu -->
 	</li>
-	<li class="footer"><a href="#">See All Messages</a></li>
+	<li class="footer"><a href="#">{{ 'MSGBOX.FOOTER' | translate
+			}}</a></li>
 </ul>
