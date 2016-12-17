@@ -16,5 +16,6 @@ export const environment = {
     messagingSenderId: '201342590340',
     storageBucket: 'ng2-admin-lte-a3958.appspot.com'
   },
-  production: false
+  production: false,
+  silent: false
 };
