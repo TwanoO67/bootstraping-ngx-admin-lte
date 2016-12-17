@@ -5,7 +5,7 @@
 	"RECIEVED": {
 		"MESSAGE": "Reception de message",
 		"NOTIFICATION": "Reception de notification",
-		"TASK": "Reception de task"
+		"TASK": "Reception de tâche"
 	},
 	"MSGBOX": {
 		"COUNT": "Vous disposez de {{0}} messages",
