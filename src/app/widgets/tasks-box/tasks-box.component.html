@@ -3,7 +3,7 @@
 	class="fa fa-flag-o"></i> <span class="label label-danger">9</span>
 </a>
 <ul class="dropdown-menu">
-	<li class="header">You have 9 tasks</li>
+	<li class="header">{{ 'TASKBOX.COUNT' | translate:tasksLength }}</li>
 	<li>
 		<!-- Inner menu: contains the tasks -->
 		<ul class="menu">
@@ -25,5 +25,6 @@
 			<!-- end task item -->
 		</ul>
 	</li>
-	<li class="footer"><a href="#">View all tasks</a></li>
+	<li class="footer"><a href="#">{{ 'TASKBOX.FOOTER' | translate
+			}}</a></li>
 </ul>

@@ -3,7 +3,7 @@
 	class="fa fa-bell-o"></i> <span class="label label-warning">10</span>
 </a>
 <ul class="dropdown-menu">
-	<li class="header">You have 10 notifications</li>
+	<li class="header">{{ 'NOTIFBOX.COUNT' | translate:notifLength }}</li>
 	<li>
 		<!-- Inner Menu: contains the notifications -->
 		<ul class="menu">
@@ -15,5 +15,6 @@
 			<!-- end notification -->
 		</ul>
 	</li>
-	<li class="footer"><a href="#">View all</a></li>
+	<li class="footer"><a href="#">{{ 'NOTIFBOX.FOOTER' |
+			translate }}</a></li>
 </ul>
