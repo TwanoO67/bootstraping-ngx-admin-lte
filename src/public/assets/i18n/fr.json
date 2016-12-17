@@ -8,15 +8,15 @@
 		"TASK": "Reception de task"
 	},
 	"MSGBOX": {
-		"COUNT": "You have {{0}} messages",
-		"FOOTER": "Show all messages"
+		"COUNT": "Vous disposez de {{0}} messages",
+		"FOOTER": "Afficher tous les messages"
 	},
 	"NOTIFBOX": {
-		"COUNT": "You have {{0}} notifications",
-		"FOOTER": "Show all notifications"
+		"COUNT": "Vous disposez de {{0}} notifications",
+		"FOOTER": "Afficher toutes les notifications"
 	},
 	"TASKBOX": {
-		"COUNT": "You have {{0}} tasks",
-		"FOOTER": "Show all tasks"
+		"COUNT": "Vous avez {{0}} tâches",
+		"FOOTER": "Afficher toutes les tâches"
 	}
 }
