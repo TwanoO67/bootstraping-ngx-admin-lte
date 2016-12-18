@@ -3,9 +3,9 @@
 		"LOADING": "Chargement du {{0}}..."
 	},
 	"RECIEVED": {
-		"MESSAGE": "Reception de message",
-		"NOTIFICATION": "Reception de notification",
-		"TASK": "Reception de tâche"
+		"MESSAGE": "Réception des messages",
+		"NOTIFICATION": "Reception des notifications",
+		"TASK": "Réception des tâches"
 	},
 	"MSGBOX": {
 		"COUNT": "Vous disposez de {{0}} messages",
