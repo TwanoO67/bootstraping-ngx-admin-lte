@@ -3,8 +3,8 @@ import { TranslateService } from 'ng2-translate';
 import { UserService } from './user.service';
 import { User } from '../models/user';
 
-const langs = ['en', 'fr', 'ru', 'he'];
-const langmatch = /en|fr|ru|he/;
+const langs = ['en', 'fr', 'ru', 'he', 'zh'];
+const langmatch = /en|fr|ru|he|zh/;
 
 @Injectable()
 export class AdminLTETranslateService implements OnInit {
@@ -27,10 +27,10 @@ export class AdminLTETranslateService implements OnInit {
             // check if current User has a Preferred Language set, and it differs from his browser lang
             let useLang = 'en';
             let prefLang = ( this.currentUser ) ? this.currentUser.preferredLang : null;
-            if ( !prefLang )
+            if ( !prefLang ) {
                 useLang = browserLang.match( langmatch ) ? browserLang : 'en';
-            else{
-                console.log('Detected User preferred language: "' + prefLang + '"');
+            } else {
+                console.log( 'Detected User preferred language: "' + prefLang + '"' );
                 useLang = prefLang.match( langmatch ) ? prefLang : 'en';
             }
             this.translate.use( useLang );
@@ -46,6 +46,5 @@ export class AdminLTETranslateService implements OnInit {
     public getTranslate(): TranslateService {
         return this.translate;
     }
-
 
 }

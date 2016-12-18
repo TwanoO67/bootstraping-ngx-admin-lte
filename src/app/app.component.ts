@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './models/user';
 import { UserService } from './services/user.service';
 import { LoggerService } from './services/logger.service';
@@ -6,7 +6,6 @@ import { Message } from './models/message';
 import { MessagesService } from './services/messages.service';
 import { ToasterService, ToasterConfig } from 'angular2-toaster/angular2-toaster';
 import { AdminLTETranslateService } from './services/translate.service';
-import { TranslateService } from 'ng2-translate';
 
 @Component( {
     selector: 'app-root',
@@ -16,17 +15,17 @@ import { TranslateService } from 'ng2-translate';
 export class AppComponent implements OnInit {
     private title = 'app works!';
     private toastrConfig: ToasterConfig;
-    @Output() translate: TranslateService;
-    @Output() logger: LoggerService;
+    private logger: LoggerService;
 
-    constructor( private userServ: UserService, private msgServ: MessagesService, private toastr: ToasterService, translate: AdminLTETranslateService ) {
+    constructor( private userServ: UserService, private msgServ: MessagesService,
+        private toastr: ToasterService, private translate: AdminLTETranslateService ) {
         this.toastrConfig = new ToasterConfig( {
             newestOnTop: true,
             showCloseButton: true,
             tapToDismiss: false
         });
-        this.translate = translate.getTranslate();
-        this.logger = new LoggerService( this.translate );
+        // this.translate = translate.getTranslate();
+        // this.logger = new LoggerService( this.translate );
     }
 
     public ngOnInit() {
@@ -54,7 +53,6 @@ export class AppComponent implements OnInit {
             firstname: 'FIRSTNAME',
             lastname: 'LASTNAME'
         });
-        // sending one user as the current one
         this.userServ.setCurrentUser( user1 );
 
         // sending a test message

@@ -17,16 +17,12 @@ export class MessagesBoxComponent implements OnInit {
     private messages: Message[];
     private msgLength: {};
 
-    //    private translate: TranslateService;
-    //    private logger: LoggerService;
-
-    constructor( private msgServ: MessagesService, @Input() private logger: LoggerService ) {
+    constructor( private msgServ: MessagesService, private logger: LoggerService ) {
         this.messages = [];
-        //translate = translate;
     }
 
     public ngOnInit() {
-        // à chaque modification de message on change nos données
+        // Every incoming message changes entire local message Array.
         this.msgServ.messages.subscribe(( msg: Message[] ) => {
             this.logger.log( 'MsgBox', null, 'RECIEVED.MESSAGE', null );
             this.messages = msg;

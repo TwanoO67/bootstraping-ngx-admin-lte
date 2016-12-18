@@ -9,10 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AppHeaderComponent {
 
-    @Input() translate: TranslateService;
-    
-    constructor( private auth: AuthService, translate: TranslateService ) {
-        this.translate = translate;
+    constructor( private auth: AuthService ) {
         // TODO
     }
 }

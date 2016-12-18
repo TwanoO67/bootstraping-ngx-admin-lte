@@ -23,9 +23,9 @@ let modules = [
     RouterModule,
     AngularFireModule.initializeApp( environment.firebase ),
     TranslateModule.forRoot({
+        deps: [Http],
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [Http]
+        useFactory: (createTranslateLoader)
     }),
     ToasterModule
 ];
