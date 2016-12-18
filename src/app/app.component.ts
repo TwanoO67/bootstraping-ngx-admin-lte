@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     }
 
     public ngOnInit() {
-        // on envoi l'evenement resize, pour AdminLTE
+        //  sedding the resize event, for AdminLTE to place the height
         let ie = this.detectIE();
         if ( !ie ) {
             window.dispatchEvent( new Event( 'resize' ) );
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
             window.dispatchEvent( event );
         }
 
-        // envoi d'un user de test
+        // defining some test users
         let user1 = new User( {
             avatarUrl: 'public/assets/img/user2-160x160.jpg',
             email: 'weber.antoine.pro@gmail.com',
@@ -54,9 +54,10 @@ export class AppComponent implements OnInit {
             firstname: 'FIRSTNAME',
             lastname: 'LASTNAME'
         });
+        // sending one user as the current one
         this.userServ.setCurrentUser( user1 );
 
-        // envoi d'un message de test
+        // sending a test message
         this.msgServ.addMessage( new Message( {
             author: user2,
             content: 'le contenu d\'un message d\'une importance extreme',

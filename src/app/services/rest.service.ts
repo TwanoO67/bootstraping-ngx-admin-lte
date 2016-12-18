@@ -50,12 +50,12 @@ export class RestService {
     public getAll(): Observable<any[]> {
         return this.http.get(this.getActionUrl())
             .map((response: Response) => {
-              // recuperation du tableau portant le nom de la collection
+              // getting an array having the same name as the model
               let data = response.json()[this.modelName];
-              // transformation du format indexé, au format associatif
+              // transforming the array from indexed to associative
               let tab = data.records.map((elem) => {
                 let unit = {};
-                // on se base sur le numéro des columns et l'ordre pour reconstruire l'objet
+                //using the cloumns order and number to rebuild the object
                 data.columns.forEach( (champ, index) => {
                   unit[champ] = elem[index];
                 });
