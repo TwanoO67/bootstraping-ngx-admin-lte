@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './models/user';
 import { UserService } from './services/user.service';
 import { LoggerService } from './services/logger.service';
@@ -16,8 +16,8 @@ import { TranslateService } from 'ng2-translate';
 export class AppComponent implements OnInit {
     private title = 'app works!';
     private toastrConfig: ToasterConfig;
-    @Output() translate: TranslateService;
-    @Output() logger: LoggerService;
+    private translate: TranslateService;
+    private logger: LoggerService;
 
     constructor( private userServ: UserService, private msgServ: MessagesService, private toastr: ToasterService, translate: AdminLTETranslateService ) {
         this.toastrConfig = new ToasterConfig( {

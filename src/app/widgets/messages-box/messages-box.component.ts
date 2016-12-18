@@ -17,10 +17,7 @@ export class MessagesBoxComponent implements OnInit {
     private messages: Message[];
     private msgLength: {};
 
-    //    private translate: TranslateService;
-    //    private logger: LoggerService;
-
-    constructor( private msgServ: MessagesService, @Input() private logger: LoggerService ) {
+    constructor( private msgServ: MessagesService, private logger: LoggerService ) {
         this.messages = [];
         //translate = translate;
     }

@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 @Injectable()
 export class LoggerService {
 
-    constructor( @Input() private translate: TranslateService ) {
+    constructor( private translate: TranslateService ) {
         // TODO
     }
 
