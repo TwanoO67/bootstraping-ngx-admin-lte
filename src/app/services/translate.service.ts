@@ -3,8 +3,8 @@ import { TranslateService } from 'ng2-translate';
 import { UserService } from './user.service';
 import { User } from '../models/user';
 
-const langs = ['en', 'fr', 'ru', 'he'];
-const langmatch = /en|fr|ru|he/;
+const langs = ['en', 'fr', 'ru', 'he', 'zh'];
+const langmatch = /en|fr|ru|he|zh/;
 
 @Injectable()
 export class AdminLTETranslateService implements OnInit {
