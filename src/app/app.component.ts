@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './models/user';
 import { UserService } from './services/user.service';
 import { LoggerService } from './services/logger.service';
@@ -6,7 +6,6 @@ import { Message } from './models/message';
 import { MessagesService } from './services/messages.service';
 import { ToasterService, ToasterConfig } from 'angular2-toaster/angular2-toaster';
 import { AdminLTETranslateService } from './services/translate.service';
-import { TranslateService } from 'ng2-translate';
 
 @Component( {
     selector: 'app-root',
@@ -16,30 +15,21 @@ import { TranslateService } from 'ng2-translate';
 export class AppComponent implements OnInit {
     private title = 'app works!';
     private toastrConfig: ToasterConfig;
-<<<<<<< HEAD
-    private translate: TranslateService;
     private logger: LoggerService;
-=======
-    @Output() translate: TranslateService;
-    @Output() logger: LoggerService;
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
 
-    constructor( private userServ: UserService, private msgServ: MessagesService, private toastr: ToasterService, translate: AdminLTETranslateService ) {
+    constructor( private userServ: UserService, private msgServ: MessagesService,
+        private toastr: ToasterService, private translate: AdminLTETranslateService ) {
         this.toastrConfig = new ToasterConfig( {
             newestOnTop: true,
             showCloseButton: true,
             tapToDismiss: false
         });
-        this.translate = translate.getTranslate();
-        this.logger = new LoggerService( this.translate );
+        // this.translate = translate.getTranslate();
+        // this.logger = new LoggerService( this.translate );
     }
 
     public ngOnInit() {
-<<<<<<< HEAD
-        // on envoi l'evenement resize, pour AdminLTE
-=======
         //  sedding the resize event, for AdminLTE to place the height
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
         let ie = this.detectIE();
         if ( !ie ) {
             window.dispatchEvent( new Event( 'resize' ) );
@@ -50,11 +40,7 @@ export class AppComponent implements OnInit {
             window.dispatchEvent( event );
         }
 
-<<<<<<< HEAD
-        // envoi d'un user de test
-=======
         // defining some test users
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
         let user1 = new User( {
             avatarUrl: 'public/assets/img/user2-160x160.jpg',
             email: 'weber.antoine.pro@gmail.com',
@@ -67,16 +53,9 @@ export class AppComponent implements OnInit {
             firstname: 'FIRSTNAME',
             lastname: 'LASTNAME'
         });
-<<<<<<< HEAD
-        this.userServ.setCurrentUser( user1 );
-
-        // envoi d'un message de test
-=======
-        // sending one user as the current one
         this.userServ.setCurrentUser( user1 );
 
         // sending a test message
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
         this.msgServ.addMessage( new Message( {
             author: user2,
             content: 'le contenu d\'un message d\'une importance extreme',

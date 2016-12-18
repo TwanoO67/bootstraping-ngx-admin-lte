@@ -34,11 +34,7 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.1.1",
-<<<<<<< HEAD
-    "ng2-bootstrap": "^1.1.5",
-=======
     "ng2-bootstrap": "^1.1.16",
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
     "ng2-translate": "^4.2.0",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"

@@ -3,15 +3,9 @@
 		"LOADING": "Chargement du {{0}}..."
 	},
 	"RECIEVED": {
-<<<<<<< HEAD
-		"MESSAGE": "Reception de message",
-		"NOTIFICATION": "Reception de notification",
-		"TASK": "Reception de tâche"
-=======
 		"MESSAGE": "Réception des messages",
 		"NOTIFICATION": "Reception des notifications",
 		"TASK": "Réception des tâches"
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
 	},
 	"MSGBOX": {
 		"COUNT": "Vous disposez de {{0}} messages",
@@ -25,8 +19,4 @@
 		"COUNT": "Vous avez {{0}} tâches",
 		"FOOTER": "Afficher toutes les tâches"
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
