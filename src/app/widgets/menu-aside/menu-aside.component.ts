@@ -66,7 +66,7 @@ export class MenuAsideComponent implements OnInit {
   ];
 
   constructor(private userServ: UserService, public router: Router, private auth: AuthService) {
-    // recuperation de l'url courrante
+    // getting the current url
     this.router.events.subscribe((evt) => this.currentUrl = evt.url);
   }
 

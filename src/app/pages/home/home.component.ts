@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit() {
-    // on place le header
+    // setttings the header for the home
     this.breadServ.set({
       description: 'HomePage',
       display: true,
@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy() {
+    //removing the header
     this.breadServ.clear();
   }
 

@@ -13,7 +13,7 @@ export class BreadcrumbComponent {
   private levels: Array<any> = [];
 
   constructor(private breadServ: BreadcrumbService) {
-    // recuperation des données depuis le service
+    // getting the data from the services
     this.breadServ.current.subscribe((data) => {
       this.display = data.display;
       this.header = data.header;

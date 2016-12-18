@@ -7,7 +7,11 @@ import { environment } from '../../environments/environment';
 @Injectable()
 export class LoggerService {
 
+<<<<<<< HEAD
     constructor( private translate: TranslateService ) {
+=======
+    constructor( @Input() private translate: TranslateService ) {
+>>>>>>> 9752d7ef1bd1db77f4c229463e0018e7e63db030
         // TODO
     }
 
