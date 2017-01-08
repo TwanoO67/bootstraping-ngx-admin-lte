@@ -103,7 +103,7 @@ export class AuthService {
       api: 'firebase',
       id_token: token,
       scope: 'openid name email displayName',
-      target: 'uyZPfupm9XEM2jdDwiz9xGmvDnly5ydU'
+      target: environment.auth0.clientID
     };
   }
 }
