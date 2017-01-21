@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ng serve",
     "prod": "ng build --prod",
+    "version": "ng --version",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -31,6 +32,7 @@
     "auth0-lock": "^10.4.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "firebase": "^3.6.6",
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.1.1",
