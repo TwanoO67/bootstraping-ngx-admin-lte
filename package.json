@@ -16,6 +16,7 @@
   "dependencies": {
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
+    "@angular/compiler-cli": "^2.4.1",
     "@angular/core": "^2.4.1",
     "@angular/forms": "^2.4.1",
     "@angular/http": "^2.4.1",
@@ -42,9 +43,9 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@types/auth0-lock": "^10.0.20",
+    "@types/auth0-lock": "^10.2.2",
     "@types/jasmine": "^2.2.30",
-    "angular-cli": "^1.0.0-beta.24",
+    "angular-cli": "^1.0.0-beta.26",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
