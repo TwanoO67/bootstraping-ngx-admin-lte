@@ -35,6 +35,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './widgets/app-header';
 import { AppFooterComponent } from './widgets/app-footer';
 import { MenuAsideComponent } from './widgets/menu-aside';
+import { ControlSidebarComponent } from './widgets/control-sidebar';
 import { MessagesBoxComponent } from './widgets/messages-box';
 import { NotificationBoxComponent } from './widgets/notification-box';
 import { TasksBoxComponent } from './widgets/tasks-box';
@@ -47,6 +48,7 @@ let widgets = [
     AppHeaderComponent,
     AppFooterComponent,
     MenuAsideComponent,
+    ControlSidebarComponent,
     MessagesBoxComponent,
     NotificationBoxComponent,
     TasksBoxComponent,
