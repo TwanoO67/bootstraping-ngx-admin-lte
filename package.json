@@ -30,7 +30,7 @@
     "angular2-toaster": "^1.0.2",
     "angular2-uuid": "^1.1.0",
     "angularfire2": "^2.0.0-beta.6",
-    "auth0-lock": "^10.4.0",
+    "auth0-lock": "10.4.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "firebase": "^3.6.6",

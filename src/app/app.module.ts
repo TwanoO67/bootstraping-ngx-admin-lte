@@ -15,8 +15,8 @@ export function createTranslateLoader( http: Http ) {
 }
 
 let modules = [
-    AlertModule,
-    DatepickerModule,
+    AlertModule.forRoot(),
+    DatepickerModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
