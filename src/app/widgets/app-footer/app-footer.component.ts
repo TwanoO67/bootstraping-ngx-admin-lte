@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 
 @Component( {
     selector: 'app-footer',
@@ -8,7 +7,6 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AppFooterComponent {
 
-    constructor( private auth: AuthService ) {
-        // TODO
+    constructor() {
     }
 }

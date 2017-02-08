@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
     private title = 'app works!';
     private toastrConfig: ToasterConfig;
     private logger: LoggerService;
+    private mylinks: Array<any> = [];
 
     constructor( private userServ: UserService, private msgServ: MessagesService,
         private toastr: ToasterService, private translate: AdminLTETranslateService ) {
@@ -54,6 +55,61 @@ export class AppComponent implements OnInit {
             lastname: 'LASTNAME'
         });
         this.userServ.setCurrentUser( user1 );
+
+        //define here your own links menu structure
+        this.mylinks = [
+          {
+            'title': 'Home',
+            'icon': 'dashboard',
+            'link': ['/']
+          },
+          {
+            'title': 'Client',
+            'icon': 'usd',
+            'link': ['/client']
+          },
+          {
+            'title': 'Sub menu',
+            'icon': 'link',
+            'sublinks': [
+              {
+                'title': 'Page 2',
+                'link': ['/page/2'],
+              },
+              {
+                'title': 'Page 3',
+                'link': ['/page/3'],
+              }
+            ]
+          },
+          {
+            'title': 'External Link',
+            'icon': 'google',
+            'link': ['http://google.com'],
+            'external': true,
+            'target': '_blank'
+          },
+          {
+            'title': 'External Links',
+            'icon': 'link',
+            'sublinks': [
+              {
+                'title': 'Github',
+                'link': ['http://github.com'],
+                'icon': 'github',
+                'external': true,
+                'target': '_blank'
+              },
+              {
+                'title': 'Yahoo',
+                'link': ['http://yahoo.com'],
+                'icon': 'yahoo',
+                'external': true,
+                'target': '_blank'
+              }
+            ]
+          }
+        ];
 
         // sending a test message
         this.msgServ.addMessage( new Message( {
