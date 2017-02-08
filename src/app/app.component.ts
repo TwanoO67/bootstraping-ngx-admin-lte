@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
         });
         this.userServ.setCurrentUser( user1 );
 
-        //define here your own links menu structure
+        // define here your own links menu structure
         this.mylinks = [
           {
             'title': 'Home',

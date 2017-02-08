@@ -8,7 +8,7 @@ import { TranslateService } from 'ng2-translate';
 })
 export class AppHeaderComponent {
 
-    constructor( ) {
-
-    }
+  constructor() {
+    // TODO
+  }
 }

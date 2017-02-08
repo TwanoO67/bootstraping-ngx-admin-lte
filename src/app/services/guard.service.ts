@@ -6,7 +6,7 @@ export class CanActivateGuard implements CanActivate {
   constructor(private router: Router) { }
 
   public canActivate() {
-    //test here if you user is logged
+    // test here if you user is logged
 
     return true;
   }

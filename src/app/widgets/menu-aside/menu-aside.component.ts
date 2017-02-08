@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
@@ -6,14 +6,13 @@ import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-menu-aside',
   styleUrls: ['./menu-aside.component.css'],
-  templateUrl: './menu-aside.component.html',
-  inputs: ['links']
+  templateUrl: './menu-aside.component.html'
 })
 export class MenuAsideComponent implements OnInit {
   private currentUrl: string;
   private currentUser: User = new User();
 
-  private links: Array<any> = [];
+  @Input() private links: Array<any> = [];
 
   constructor(private userServ: UserService, public router: Router) {
     // getting the current url
