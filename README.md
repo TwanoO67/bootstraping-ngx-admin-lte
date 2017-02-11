@@ -144,3 +144,8 @@ constructor(
 ```
 
 warning, the import path are relative to the component you're writing in ...
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/badge.svg?style=beer-square)](https://beerpay.io/TwanoO67/ng2-admin-lte)  [![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/make-wish.svg?style=flat-square)](https://beerpay.io/TwanoO67/ng2-admin-lte?focus=wish)
