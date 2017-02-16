@@ -44,7 +44,6 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
-    "@types/chai": "^3.4.34",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
