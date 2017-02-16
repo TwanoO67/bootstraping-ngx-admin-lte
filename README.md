@@ -7,7 +7,13 @@ Bootstraping of Angular2 with AdminLTE dashboard template
 
 ![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
 
-## Installation
+## Launching with docker
+
+```
+./bin/start.sh
+```
+
+## Lauching with node < 7 locally installed
 
 ```
 npm install
@@ -16,34 +22,26 @@ npm start
 
 ## Developpement
 
-Ajouter un composant
+Adding a component
 
 ```
 cd src/app/widgets/
-ng g component my-new-widget
+npm run gen component my-new-widget
 ```
 
 Ajouter une page
 
 ```
 cd src/app/pages/
-ng g component my-new-page
+npm run gen component my-new-page
 ```
 
 Ajouter un service
 
 ```
 cd src/app/services/
-ng g service my-new-service
+npm run gen service my-new-service
 ```
-
-
-## Changelog 13/10/2016
-
-- Updated to Angular 2.1
-- Updated to Angular-cli webpack beta 17
-- Fix: Build issues, rigth nav issue
-- Add: Second page for routing example
 
 ## Components from Ng2-bootstrap
 
@@ -145,7 +143,7 @@ constructor(
 
 warning, the import path are relative to the component you're writing in ...
 
-## Support on Beerpay
+## Support
 Hey dude! Help me out for a couple of :beers:!
 
 [![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/badge.svg?style=beer-square)](https://beerpay.io/TwanoO67/ng2-admin-lte)  [![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/make-wish.svg?style=flat-square)](https://beerpay.io/TwanoO67/ng2-admin-lte?focus=wish)

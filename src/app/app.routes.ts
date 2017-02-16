@@ -6,12 +6,32 @@ import { CanActivateGuard } from './services/guard.service';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
 import { ClientComponent } from './pages/client/client.component';
+import { LayoutsAuthComponent } from './pages/layouts/auth/auth';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
-  // Root
+  //logged routes
   {
-    component: HomeComponent,
-    path: ''
+    component: LayoutsAuthComponent,
+    canActivate: [CanActivateGuard],
+    path: '',
+    children: [
+      {
+        component: HomeComponent,
+        canActivate: [CanActivateGuard],
+        path: 'home'
+      },
+    ]
+  },
+  //not logged routes
+  {
+    component: LoginComponent,
+    path: 'login'
+  },
+  {
+    component: RegisterComponent,
+    path: 'register'
   },
   {
     canActivate: [CanActivateGuard],

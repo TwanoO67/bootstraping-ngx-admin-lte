@@ -23,7 +23,6 @@ export class UserBoxComponent implements OnInit {
   }
 
   private logout = (): void => {
-    this.router.navigate(['/']);
-    // this.auth.logout();
+    this.userServ.logout();
   }
 }

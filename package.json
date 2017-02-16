@@ -1,11 +1,12 @@
 {
   "name": "ng2-admin-lte",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 ",
     "prod": "ng build --prod",
+    "gen": "ng g",
     "version": "ng --version",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
@@ -14,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.0.0-beta.31",
     "@angular/common": "^2.4.1",
     "@angular/compiler": "^2.4.1",
     "@angular/compiler-cli": "^2.4.1",
@@ -23,7 +25,6 @@
     "@angular/platform-browser": "^2.4.1",
     "@angular/platform-browser-dynamic": "^2.4.1",
     "@angular/router": "^3.4.1",
-    "@types/chai": "^3.4.34",
     "admin-lte": "^2.3.8",
     "angular2-jwt": "^0.1.24",
     "angular2-toaster": "^1.0.2",
@@ -43,7 +44,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
-    "angular-cli": "^1.0.0-beta.26",
+    "@types/chai": "^3.4.34",
     "codelyzer": "~0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
