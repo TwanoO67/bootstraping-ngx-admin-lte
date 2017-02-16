@@ -1,0 +1,28 @@
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+		<app-header>{{ 'LOADING' | translate }} header...</app-header>
+
+		<app-menu-aside [links]="mylinks">{{ 'LOADING' | translate }} menu...</app-menu-aside>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<toaster-container [toasterconfig]="toastrConfig"></toaster-container>
+			<app-breadcrumb></app-breadcrumb>
+
+			<!-- Main content -->
+			<section class="content">
+				<div class="box box-default">
+					<div class="box-body">
+						<router-outlet></router-outlet>
+					</div>
+				</div>
+			</section>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-wrapper -->
+		<app-footer>{{ 'LOADING' | translate }} footer...</app-footer>
+		<app-aside>{{ 'LOADING' | translate }} control sidebar...</app-aside>
+	</div>
+	<!-- ./wrapper -->
+</body>

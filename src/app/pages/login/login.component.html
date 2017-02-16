@@ -1,0 +1,70 @@
+<body class="hold-transition login-page">
+  <div class="login-box" >
+    <div class="login-logo">
+      <a href="../../index2.html"><b>Admin</b>LTE</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form >
+
+        <div class="form-group has-feedback">
+          <input type="email" class="form-control" placeholder="Email" required minlength="8" name="eml" [(ngModel)]="email" #eml="ngModel">
+          <span class="glyphicon glyphicon-enveloppe form-control-feedback"></span>
+          <div *ngIf="eml.errors && (eml.dirty || eml.touched)" class="alert alert-danger">
+              <div [hidden]="!eml.errors.required">
+                L'email est requis
+              </div>
+              <div [hidden]="!eml.errors.minlength">
+                L'email doit avoir au moins 8 caractères
+              </div>
+          </div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Password" required minlength="8" name="passwd" [(ngModel)]="password" #passwd="ngModel">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          <div *ngIf="passwd.errors && (passwd.dirty || passwd.touched)"
+               class="alert alert-danger">
+              <div [hidden]="!passwd.errors.required">
+                Le password est requis
+              </div>
+              <div [hidden]="!passwd.errors.minlength">
+                Le password doit avoir au moins 8 caractères
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <label>
+                <input type="checkbox"> Remember Me
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="login()" >Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center">
+        <p>- OR -</p>
+        <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
+          Facebook</a>
+        <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
+          Google+</a>
+      </div>
+      <!-- /.social-auth-links -->
+
+      <a href="#">I forgot my password</a><br>
+      <a routerLink="/register" class="text-center">Register a new membership</a>
+
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+  <!-- /.login-box -->
+</body>

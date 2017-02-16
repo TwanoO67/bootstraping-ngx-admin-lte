@@ -5,6 +5,7 @@ export class User {
     public avatarUrl: string;
     public creationDate: string;
     public preferredLang: string;
+    public connected: boolean = false;
 
     public constructor( data: any = {}) {
         this.firstname = data.firstname || '';
@@ -13,6 +14,7 @@ export class User {
         this.avatarUrl = data.avatarUrl || '';
         this.creationDate = data.creation_date || Date.now();
         this.preferredLang = data.preferredLang || null;
+        this.connected = data.connected || false;
     }
 
     public getName() {
