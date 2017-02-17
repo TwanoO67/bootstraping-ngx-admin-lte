@@ -22,6 +22,16 @@ const routes: Routes = [
         canActivate: [CanActivateGuard],
         path: 'home'
       },
+      {
+        canActivate: [CanActivateGuard],
+        component: PageNumComponent,
+        path: 'page/:id'
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: ClientComponent,
+        path: 'client'
+      }
     ]
   },
   //not logged routes
@@ -32,16 +42,6 @@ const routes: Routes = [
   {
     component: RegisterComponent,
     path: 'register'
-  },
-  {
-    canActivate: [CanActivateGuard],
-    component: PageNumComponent,
-    path: 'page/:id'
-  },
-  {
-    canActivate: [CanActivateGuard],
-    component: ClientComponent,
-    path: 'client'
   }
 ];
 
