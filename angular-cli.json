@@ -22,8 +22,8 @@
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/admin-lte/dist/js/app.js"
       ],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
