@@ -7,11 +7,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   constructor( ) {
-
+    // TODO
   }
 
-  ngOnInit() {
-
+  private ngOnInit() {
+    // TODO
   }
 
 }

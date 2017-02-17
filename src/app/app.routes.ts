@@ -11,15 +11,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
-  //logged routes
+  // logged routes
   {
-    component: LayoutsAuthComponent,
     canActivate: [CanActivateGuard],
+    component: LayoutsAuthComponent,
     path: '',
     children: [
       {
-        component: HomeComponent,
         canActivate: [CanActivateGuard],
+        component: HomeComponent,
         path: 'home'
       },
       {
@@ -34,7 +34,7 @@ const routes: Routes = [
       }
     ]
   },
-  //not logged routes
+  // not logged routes
   {
     component: LoginComponent,
     path: 'login'
