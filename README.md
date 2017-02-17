@@ -13,6 +13,12 @@ Bootstraping of Angular2 with AdminLTE dashboard template
 ./bin/start.sh
 ```
 
+## Building with docker
+
+```
+./bin/prod.sh
+```
+
 ## Lauching with node < 7 locally installed
 
 ```
