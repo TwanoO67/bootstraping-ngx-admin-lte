@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
     // TODO
   }
 
-  private ngOnInit() {
+  public ngOnInit() {
     // TODO
   }
 

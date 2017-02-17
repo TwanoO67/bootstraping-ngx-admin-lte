@@ -12,7 +12,7 @@ export class CanActivateGuard implements CanActivate {
   ) {
     this.user.currentUser.subscribe((user) => {
       this.connected = user.connected;
-    })
+    });
   }
 
   public canActivate() {

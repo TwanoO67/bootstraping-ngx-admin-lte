@@ -14,8 +14,6 @@ const routes: Routes = [
   // logged routes
   {
     canActivate: [CanActivateGuard],
-    component: LayoutsAuthComponent,
-    path: '',
     children: [
       {
         canActivate: [CanActivateGuard],
@@ -33,6 +31,8 @@ const routes: Routes = [
         path: 'client'
       }
     ]
+    component: LayoutsAuthComponent,
+    path: '',
   },
   // not logged routes
   {
