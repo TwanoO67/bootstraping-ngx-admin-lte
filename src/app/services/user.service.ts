@@ -17,7 +17,7 @@ export class UserService {
       this.currentUser.next( user );
     }
 
-    public logout(){
+    public logout() {
       let user = new User();
       user.connected = false;
       this.setCurrentUser( user );

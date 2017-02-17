@@ -7,6 +7,7 @@
     "start": "ng serve --host 0.0.0.0 ",
     "prod": "ng build --prod",
     "gen": "ng g",
+    "pages": "ng github-pages:deploy",
     "version": "ng --version",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",

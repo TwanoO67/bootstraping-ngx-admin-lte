@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     // envoyer les champs a php
 
     // si retour positif, log le user
-    if ( 1===1 ) {
+    if ( 1 === 1 ) {
 
       let user1 = new User( {
           avatarUrl: 'public/assets/img/user2-160x160.jpg',
