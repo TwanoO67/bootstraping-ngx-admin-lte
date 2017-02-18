@@ -30,7 +30,7 @@ const routes: Routes = [
         component: ClientComponent,
         path: 'client'
       }
-    ]
+    ],
     component: LayoutsAuthComponent,
     path: '',
   },
