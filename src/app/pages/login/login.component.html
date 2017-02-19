@@ -7,7 +7,7 @@
     <div class="login-box-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form >
+      <form (submit)="login()" >
 
         <div class="form-group has-feedback">
           <input type="email" class="form-control" placeholder="Email" required minlength="8" name="eml" [(ngModel)]="email" #eml="ngModel">
@@ -51,7 +51,7 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center">
+      <!--div class="social-auth-links text-center">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
           Facebook</a>
