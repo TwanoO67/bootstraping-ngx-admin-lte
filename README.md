@@ -19,7 +19,7 @@ Bootstraping of Angular2 with AdminLTE dashboard template
 ./bin/prod.sh
 ```
 
-## Lauching with node < 7 locally installed
+## Lauching with node > 7 locally installed
 
 ```
 npm install
