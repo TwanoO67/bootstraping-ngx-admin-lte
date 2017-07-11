@@ -61,63 +61,6 @@ cd src/app/services/
 yarn gen service my-new-service
 ```
 
-## Components from Ng2-bootstrap
-
-For standard boostrap widget we are using ng2-bootstrap
-
-You can find all widget and the doc here:
-http://valor-software.com/ng2-bootstrap/#/alerts
-
-## Specific Components
-
-### App Header
-
-This widget handle the header bar, it includes other 'box' widgets for the top navigation:
-
-* Messages Box
-* Notification Box
-* Tasks Box
-* User box
-
-### Messages Box
-
-This widget is registred to the messages service
-
-### Notification Box
-
-WIP This widget is registred to the notification service
-
-### Tasks Box
-
-WIP This widget is registred to the task service
-
-### User box
-
-This widget is registred to the user service (for the current user display)
-
-### Menu Aside
-
-This widget handle the left navigation Menu
-
-It is registred to the user service (for the current user display)
-
-## Models
-
-### User
-
-* *firstname*: string, First Name of the user
-* *lastname* : string, Last Name of the user
-* *email* : string, Email address of the user
-* *avatar_url* : string, URL for the user avatar, could be absolute or relative
-* *creation_date* : string, timestamp of the creation of the user
-
-### Message
-
-* *title* : string, title of the message
-* *content* : string, content of the mesage
-* *author* : User, source user of the message
-* *destination* : User, destination user of the message
-* *date* : string, date of sending
 
 ## Services
 

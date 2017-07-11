@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-//modules
+// modules
 import { NgxAdminLteModule } from 'ngx-admin-lte';
 
 // les pages
@@ -15,7 +15,7 @@ import { PageNumComponent } from './pages/page-num/page-num.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
-let pages = [
+const pages = [
     HomeComponent,
     PageNumComponent,
     LoginComponent,

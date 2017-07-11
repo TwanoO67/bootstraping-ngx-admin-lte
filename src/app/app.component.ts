@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
     this.menuServ.setCurrentMenu(this.mylinks);
 
 
-    //FAKE MESSAGE 
+    // FAKE MESSAGE 
     // defining some test users
     const user1 = new User( {
         avatarUrl: 'public/assets/img/user2-160x160.jpg',

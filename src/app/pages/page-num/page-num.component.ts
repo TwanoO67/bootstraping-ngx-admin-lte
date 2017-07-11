@@ -8,7 +8,7 @@ import { BreadcrumbService } from 'ngx-admin-lte';
   templateUrl: './page-num.component.html'
 })
 export class PageNumComponent implements OnInit, OnDestroy {
-  private id: number = 0;
+  private id = 0;
   private sub: any;
 
   constructor(
@@ -20,7 +20,7 @@ export class PageNumComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     // when calling routes change
-    let idkey = 'id';
+    const idkey = 'id';
     this.sub = this.route.params.subscribe((data) => {
       this.id = data[idkey];
       // changing header
