@@ -1,11 +1,17 @@
-# ng2-admin-lte
+# bootstraping ngx-admin-lte
 
 [![Join the chat at https://gitter.im/TwanoO67/ng2-admin-lte](https://badges.gitter.im/TwanoO67/ng2-admin-lte.svg)](https://gitter.im/TwanoO67/ng2-admin-lte?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/TwanoO67/ng2-admin-lte.svg?branch=master)](https://travis-ci.org/TwanoO67/ng2-admin-lte)
 
-Bootstraping of Angular2 with AdminLTE dashboard template
+Bootstraping of Angular4 with AdminLTE dashboard template
+( Using ngx-admin-lte Library)
 
 ![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
+
+## UPDATE !
+
+This version use the new npm package ngx-admin-lte (this will be easier to update)
+If your are looking for the old version for angular check the "angular2" branch.
 
 ## Support
 Hey dude! Help me out for a couple of :beers:!
@@ -27,8 +33,9 @@ Hey dude! Help me out for a couple of :beers:!
 ## Lauching with node > 7 locally installed
 
 ```
-npm install
-npm start
+npm install -g yarn
+yarn
+yarn start
 ```
 
 ## Developpement
@@ -44,14 +51,14 @@ Ajouter une page
 
 ```
 cd src/app/pages/
-npm run gen component my-new-page
+yarn gen component my-new-page
 ```
 
 Ajouter un service
 
 ```
 cd src/app/services/
-npm run gen service my-new-service
+yarn gen service my-new-service
 ```
 
 ## Components from Ng2-bootstrap

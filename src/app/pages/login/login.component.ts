@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { User } from '../../models/user';
-import { UserService } from '../../services/user.service';
+import { User, UserService } from 'ngx-admin-lte';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
+  styles: ['./login.css'],
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {

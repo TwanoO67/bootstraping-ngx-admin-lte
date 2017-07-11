@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { BreadcrumbService } from '../../services/breadcrumb.service';
+import { BreadcrumbService } from 'ngx-admin-lte';
 
 @Component({
   selector: 'app-page-num',

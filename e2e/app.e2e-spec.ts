@@ -1,10 +1,10 @@
-import { Ng2AdminLtePage } from './app.po';
+import { NgxAdminLtePage } from './app.po';
 
-describe('ng2-admin-lte App', function() {
-  let page: Ng2AdminLtePage;
+describe('ngx-admin-lte App', () => {
+  let page: NgxAdminLtePage;
 
   beforeEach(() => {
-    page = new Ng2AdminLtePage();
+    page = new NgxAdminLtePage();
   });
 
   it('should display message saying app works', () => {

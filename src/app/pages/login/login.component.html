@@ -7,11 +7,11 @@
     <div class="login-box-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form (submit)="login()" >
+      <form>
 
         <div class="form-group has-feedback">
           <input type="email" class="form-control" placeholder="Email" required minlength="8" name="eml" [(ngModel)]="email" #eml="ngModel">
-          <span class="glyphicon glyphicon-enveloppe form-control-feedback"></span>
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           <div *ngIf="eml.errors && (eml.dirty || eml.touched)" class="alert alert-danger">
               <div [hidden]="!eml.errors.required">
                 L'email est requis
@@ -35,9 +35,10 @@
               </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-8">
-            <div class="checkbox icheck">
+            <div class="checkbox icheck icheckbox_square-blue">
               <label>
                 <input type="checkbox"> Remember Me
               </label>
@@ -45,10 +46,11 @@
           </div>
           <!-- /.col -->
           <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat" >Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="login()" >Sign In</button>
           </div>
           <!-- /.col -->
         </div>
+
       </form>
 
       <!--div class="social-auth-links text-center">
