@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuService } from 'ngx-admin-lte';
+import { User, MenuService, Message, MessagesService } from 'ngx-admin-lte';
 
 @Component({
   selector: 'app-root',
@@ -58,7 +58,8 @@ export class AppComponent implements OnInit {
   ];
 
   constructor(
-    private menuServ: MenuService
+    private menuServ: MenuService,
+    private msgServ: MessagesService
   ) {
 
   }
@@ -66,6 +67,29 @@ export class AppComponent implements OnInit {
   public ngOnInit() {
     // define menu
     this.menuServ.setCurrentMenu(this.mylinks);
+
+
+    //FAKE MESSAGE 
+    // defining some test users
+    const user1 = new User( {
+        avatarUrl: 'public/assets/img/user2-160x160.jpg',
+        email: 'weber.antoine.pro@gmail.com',
+        firstname: 'WEBER',
+        lastname: 'Antoine'
+    });
+    const user2 = new User( {
+        avatarUrl: 'public/assets/img/user2-160x160.jpg',
+        email: 'EMAIL',
+        firstname: 'FIRSTNAME',
+        lastname: 'LASTNAME'
+    });
+    // sending a test message
+    this.msgServ.addMessage( new Message( {
+        author: user2,
+        content: 'le contenu d\'un message d\'une importance extreme',
+        destination: user1,
+        title: 'un message super important'
+    }) );
   }
 
 }
