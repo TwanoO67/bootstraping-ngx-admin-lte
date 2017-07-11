@@ -7,6 +7,11 @@ Bootstraping of Angular2 with AdminLTE dashboard template
 
 ![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
 
+## Support
+Hey dude! Help me out for a couple of :beers:!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ghostsmaker@hotmail.com&lc=US&item_name=TwanoO67&item_number=ng2-admin-lte&no_note=0&currency_code=EUR)
+
 ## Launching with docker
 
 ```
@@ -148,8 +153,3 @@ constructor(
 ```
 
 warning, the import path are relative to the component you're writing in ...
-
-## Support
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/badge.svg?style=beer-square)](https://beerpay.io/TwanoO67/ng2-admin-lte)  [![Beerpay](https://beerpay.io/TwanoO67/ng2-admin-lte/make-wish.svg?style=flat-square)](https://beerpay.io/TwanoO67/ng2-admin-lte?focus=wish)
