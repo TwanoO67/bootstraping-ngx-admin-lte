@@ -1,10 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CanActivateGuard, LayoutsAuthComponent } from 'ngx-admin-lte';
+import { CanActivateGuard, LayoutAuthComponent, LayoutLoginComponent, LayoutRegisterComponent } from 'ngx-admin-lte';
 
 import { LoginComponent } from './pages/login/login.component';
-import { LayoutLoginComponent } from 'ngx-admin-lte';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNumComponent } from './pages/page-num/page-num.component';
@@ -28,7 +27,7 @@ const routes: Routes = [
         path: 'page/:id'
       },
     ],
-    component: LayoutsAuthComponent,
+    component: LayoutAuthComponent,
     path: '',
   },
   // not logged routes
@@ -43,8 +42,14 @@ const routes: Routes = [
     path: 'login',
   },
   {
-    component: RegisterComponent,
-    path: 'register'
+    children: [
+      {
+        component: RegisterComponent,
+        path: ''
+      }
+    ],
+    component: LayoutRegisterComponent,
+    path: 'register',
   }
 ];
 

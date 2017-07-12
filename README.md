@@ -66,44 +66,5 @@ yarn gen service my-new-service
 ```
 
 
-## Services
-
-### User service
-
-This service is used to send/get the current user informations accross the app
-
-For example you can set the current user :
-
-```
-import {User} from "../../models/user";
-import {UserService} from "../../services/user.service";
-...
-constructor(
-  private _user_serv: UserService
-){
-...
-ngOnInit(){
-  let user = new User({
-    firstname: "WEBER",
-    lastname: "Antoine",
-    email: "why-not-yop@yopmail.com",
-    avatar_url: "assets/img/user2-160x160.jpg"
-  });
-  this._user_serv.setCurrentUser( user );
-```
-
-and you can get the user in a widget:
-
-```
-import {User} from "../../models/user";
-import {UserService} from "../../services/user.service";
-...
-private current_user: User;
-constructor(
-  private _user_serv : UserService,
-){
-  //se connecter au modification du user courant
-  this._user_serv.current_user.subscribe((user: User) => this.current_user = user);
-```
-
-warning, the import path are relative to the component you're writing in ...
+For more specific feature on the Admin_LTE template, see the readme of this repo:
+[https://github.com/TwanoO67/ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte)
