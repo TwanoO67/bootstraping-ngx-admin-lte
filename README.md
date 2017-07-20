@@ -14,8 +14,8 @@ This version use the new npm package ngx-admin-lte (this will be easier to updat
 If your are looking for the old version for angular check the "angular2" branch.
 
 There's now two different repo:
-[bootstraping-ngx-admin-lte](https://github.com/TwanoO67/bootstraping-ngx-admin-lte) For those who want the full bootstraping
-[ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte) For whom want to install via npm in a existing project
+* [bootstraping-ngx-admin-lte](https://github.com/TwanoO67/bootstraping-ngx-admin-lte) For those who want the full bootstraping
+* [ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte) For whom want to install via npm in a existing project
 
 ## Support
 Hey dude! Help me out for a couple of :beers:!
@@ -44,6 +44,10 @@ yarn start
 
 ## Developpement
 
+
+For the feature on the Admin_LTE template, see the readme of this repo:
+[https://github.com/TwanoO67/ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte)
+
 Adding a component
 
 ```
@@ -66,5 +70,3 @@ yarn gen service my-new-service
 ```
 
 
-For more specific feature on the Admin_LTE template, see the readme of this repo:
-[https://github.com/TwanoO67/ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte)
