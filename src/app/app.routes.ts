@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CanActivateGuard, LayoutsAuthComponent } from 'ngx-admin-lte';
+import { CanActivateGuard, LayoutAuthComponent } from 'ngx-admin-lte';
 
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -27,7 +27,7 @@ const routes: Routes = [
         path: 'page/:id'
       },
     ],
-    component: LayoutsAuthComponent,
+    component: LayoutAuthComponent,
     path: '',
   },
   // not logged routes
