@@ -8,7 +8,7 @@ import { BreadcrumbService } from 'ngx-admin-lte';
   templateUrl: './page-num.component.html'
 })
 export class PageNumComponent implements OnInit, OnDestroy {
-  private id = 0;
+  public id = 0;
   private sub: any;
 
   constructor(

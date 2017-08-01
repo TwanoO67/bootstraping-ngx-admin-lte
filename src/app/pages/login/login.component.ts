@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-  private password: string;
-  private email: string;
+  public password: string;
+  public email: string;
 
   constructor(
     private userServ: UserService,
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
       const user1 = new User( {
           avatarUrl: 'public/assets/img/user2-160x160.jpg',
-          email: 'weber.antoine.pro@gmail.com',
+          email: 'weber.antoine@outlook.com',
           firstname: 'WEBER',
           lastname: 'Antoine'
       } );
