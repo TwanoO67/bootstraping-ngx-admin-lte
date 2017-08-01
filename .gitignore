@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 
+
+#dev binaries
+maj.sh
+
 # dependencies
 /node_modules
 
