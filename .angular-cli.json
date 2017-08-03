@@ -9,8 +9,8 @@
       "outDir": "dist",
       "assets": [
         "public",
-        "assets",
-        "favicon.ico"
+        "favicon.ico",
+        { "glob": "**/*", "input": "../node_modules/ngx-admin-lte/src/public/assets", "output": "./assets" }
       ],
       "index": "index.html",
       "main": "main.ts",

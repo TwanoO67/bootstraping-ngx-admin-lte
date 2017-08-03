@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, MenuService, Message, MessagesService } from 'ngx-admin-lte';
+import { User, MenuService, Message, MessagesService, NotificationsService, Notification } from 'ngx-admin-lte';
 
 @Component({
   selector: 'app-root',
@@ -59,7 +59,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private menuServ: MenuService,
-    private msgServ: MessagesService
+    private msgServ: MessagesService,
+    private notifServ: NotificationsService
   ) {
 
   }
@@ -89,6 +90,14 @@ export class AppComponent implements OnInit {
         destination: user1,
         title: 'un message super important'
     }) );
+    // sending a test notif
+    this.notifServ.addNotification( new Notification( {
+        class: 'fa fa-users text-aqua',
+        content: '5 new members joined today',
+        link: '/page/2'
+    }) );
+
+
   }
 
 }
