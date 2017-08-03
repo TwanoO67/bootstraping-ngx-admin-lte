@@ -10,8 +10,7 @@
       "assets": [
         "public",
         "favicon.ico",
-        { "glob": "**/*", "input": "../node_modules/admin-lte/bootstrap/fonts", "output": "./assets/fonts" }
-        { "glob": "**/*", "input": "../node_modules/admin-lte/dist/img", "output": "./assets/img" }
+        { "glob": "**/*", "input": "../node_modules/ngx-admin-lte/src/public/assets", "output": "./assets" }
       ],
       "index": "index.html",
       "main": "main.ts",

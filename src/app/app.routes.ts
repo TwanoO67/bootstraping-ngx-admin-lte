@@ -19,6 +19,11 @@ const routes: Routes = [
       {
         canActivate: [CanActivateGuard],
         component: HomeComponent,
+        path: ''
+      },
+      {
+        canActivate: [CanActivateGuard],
+        component: HomeComponent,
         path: 'home'
       },
       {
