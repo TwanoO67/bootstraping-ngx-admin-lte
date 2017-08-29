@@ -52,21 +52,21 @@ Adding a component
 
 ```
 cd src/app/widgets/
-npm run gen component my-new-widget
+yarn ng g component my-new-widget
 ```
 
-Ajouter une page
+Adding a page
 
 ```
 cd src/app/pages/
-yarn gen component my-new-page
+yarn ng g component my-new-page
 ```
 
-Ajouter un service
+Adding a service
 
 ```
 cd src/app/services/
-yarn gen service my-new-service
+yarn ng g service my-new-service
 ```
 
 
