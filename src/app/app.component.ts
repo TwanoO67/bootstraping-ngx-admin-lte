@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { User, MenuService, Message, MessagesService, NotificationsService, Notification } from 'ngx-admin-lte';
+import {
+  User,
+  MenuService,
+  Message,
+  MessagesService,
+  NotificationsService,
+  Notification,
+  LogoService,
+  FooterService
+} from 'ngx-admin-lte';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +16,15 @@ import { User, MenuService, Message, MessagesService, NotificationsService, Noti
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  // define your footer links
+  private footer = {
+      left_part: `<strong>
+        Copyright &copy; 2017
+        <a href="http://www.weberantoine.fr" >WEBER Antoine</a>.
+    	</strong>
+      Open-source Sharing`,
+      right_part: 'Bootstrapping Ngx-Admin-LTE',
+    };
   // define here your own links menu structure
   private mylinks: any = [
     {
@@ -56,9 +74,16 @@ export class AppComponent implements OnInit {
       ]
     }
   ];
+  // define here your logo
+  private logo = {
+    html_mini: 'NG<b>X</b>',
+    html_lg: '<b>NGX</b>Admin-LTE',
+  };
 
   constructor(
+    private footerServ: FooterService,
     private menuServ: MenuService,
+    private logoServ: LogoService,
     private msgServ: MessagesService,
     private notifServ: NotificationsService
   ) {
@@ -67,7 +92,9 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     // define menu
-    this.menuServ.setCurrentMenu(this.mylinks);
+    this.menuServ.setCurrent(this.mylinks);
+    this.footerServ.setCurrent(this.footer);
+    this.logoServ.setCurrent(this.logo);
 
     // FAKE MESSAGE
     // defining some test users

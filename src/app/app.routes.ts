@@ -33,6 +33,7 @@ const routes: Routes = [
       },
     ],
     component: LayoutAuthComponent,
+    data: [{ 'skin': 'skin-black'}],
     path: '',
   },
   // not logged routes
