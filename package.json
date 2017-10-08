@@ -1,6 +1,6 @@
 {
   "name": "bootstraping-ngx-admin-lte",
-  "version": "0.4.0",
+  "version": "0.5.1",
   "license": "WTFPL",
   "scripts": {
     "ng": "ng",
@@ -21,12 +21,12 @@
     "@angular/platform-browser": "^4.4.4",
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/router": "^4.4.4",
-    "admin-lte": "2.4.0",
+    "admin-lte": "2.3.11",
     "angular2-toaster": "^3.0.1",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
-    "ngx-admin-lte": "^0.5.0",
+    "ngx-admin-lte": "^0.5.1",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1",
     "rxjs": "^5.1.0",

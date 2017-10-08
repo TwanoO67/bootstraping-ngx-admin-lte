@@ -25,7 +25,7 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../node_modules/admin-lte/dist/js/adminlte.min.js"
+        "../node_modules/admin-lte/dist/js/app.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
