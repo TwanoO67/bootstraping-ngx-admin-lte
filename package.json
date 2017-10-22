@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^4.4.4",
     "@angular/platform-browser-dynamic": "^4.4.4",
     "@angular/router": "^4.4.4",
+    "@ngx-translate/core": "^8.0.0",
+    "@ngx-translate/http-loader": "^2.0.0",
     "admin-lte": "2.3.11",
     "angular2-toaster": "^3.0.1",
     "bootstrap": "^3.3.7",
@@ -28,12 +30,12 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1",
-    "ngx-admin-lte": "^0.5.1",
+    "ngx-admin-lte": "^0.6.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "^1.4.9",
+    "@angular/cli": "1.0.3",
     "@angular/compiler-cli": "^4.4.4",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",

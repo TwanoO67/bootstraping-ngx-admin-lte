@@ -24,7 +24,7 @@ export class PageNumComponent implements OnInit, OnDestroy {
     this.sub = this.route.params.subscribe((data) => {
       this.id = data[idkey];
       // changing header
-      this.breadServ.set({
+      this.breadServ.setCurrent({
         description: 'This is our ' + this.id + ' page',
         display: true,
         levels: [

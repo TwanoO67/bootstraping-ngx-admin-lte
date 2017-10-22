@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
 
       user1.connected = true;
 
-      this.userServ.setCurrentUser( user1 );
+      this.userServ.setCurrent( user1 );
 
       this.router.navigate( ['home'] );
     } else {
