@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@angular/animations@^4.4.6":
+  version "4.4.6"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.4.6.tgz#fa661899a8a4e38cb7c583c7a5c97ce65d592a35"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/cli@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.0.3.tgz#73a4b43f2ea8e720f52f1041e5e833cae1fb291f"
@@ -141,17 +147,9 @@
     magic-string "^0.19.0"
     source-map "^0.5.6"
 
-"@ngx-translate/core@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-7.2.2.tgz#e70069d5ef8e837ea336e6890773786f5efb5de5"
-
 "@ngx-translate/core@^8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-8.0.0.tgz#751fd6b512d80f3a748d2de8dfc96dfefa29afe0"
-
-"@ngx-translate/http-loader@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-1.1.0.tgz#a293260cea6f61784a6ff9c55a4973ea9778dce2"
 
 "@ngx-translate/http-loader@^2.0.0":
   version "2.0.0"
@@ -263,6 +261,10 @@ amdefine@>=0.0.4:
 angular2-toaster@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/angular2-toaster/-/angular2-toaster-3.0.1.tgz#8e7a33cdbfb2111f488cc2238ed2881922a637fe"
+
+angular2-toaster@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/angular2-toaster/-/angular2-toaster-4.0.1.tgz#587aef6df903cf5e2b7eba4047b54ec9a21b8e3b"
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -3297,10 +3299,11 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-ngx-admin-lte@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/ngx-admin-lte/-/ngx-admin-lte-0.5.1.tgz#b7bf6cc8a55298f4ac1321ca3a39d3cf5fb6137f"
+ngx-admin-lte@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/ngx-admin-lte/-/ngx-admin-lte-0.6.1.tgz#e3932de765f44f9bfc549358aa708c2c1e9d5653"
   dependencies:
+    "@angular/animations" "^4.4.6"
     "@angular/common" "^4.4.4"
     "@angular/core" "^4.4.4"
     "@angular/forms" "^4.4.4"
@@ -3308,9 +3311,10 @@ ngx-admin-lte@^0.5.1:
     "@angular/platform-browser" "^4.4.4"
     "@angular/platform-browser-dynamic" "^4.4.4"
     "@angular/router" "^4.4.4"
-    "@ngx-translate/core" "^7.2.2"
-    "@ngx-translate/http-loader" "^1.1.0"
+    "@ngx-translate/core" "^8.0.0"
+    "@ngx-translate/http-loader" "^2.0.0"
     admin-lte "2.3.11"
+    angular2-toaster "^4.0.1"
     bootstrap "^3.3.7"
     core-js "^2.5.1"
     font-awesome "^4.7.0"
