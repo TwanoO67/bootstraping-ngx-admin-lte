@@ -30,7 +30,7 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1",
-    "ngx-admin-lte": "0.6.2",
+    "ngx-admin-lte": "0.6.3",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
