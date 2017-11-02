@@ -24,11 +24,13 @@ const pages = [
 
 // main bootstrap
 import { routing } from './app.routes';
+import { MenuWidgetComponent } from './widgets/menu-widget/menu-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ...pages
+    ...pages,
+    MenuWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,9 @@ import { routing } from './app.routes';
   providers: [],
   bootstrap: [
     AppComponent
+  ],
+  entryComponents: [
+    MenuWidgetComponent
   ]
 })
 export class AppModule { }

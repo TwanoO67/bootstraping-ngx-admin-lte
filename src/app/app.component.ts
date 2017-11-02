@@ -9,6 +9,7 @@ import {
   LogoService,
   FooterService
 } from 'ngx-admin-lte';
+import { MenuWidgetComponent } from './widgets/menu-widget/menu-widget.component';
 
 @Component({
   selector: 'app-root',
@@ -72,6 +73,13 @@ export class AppComponent implements OnInit {
           'target': '_blank'
         }
       ]
+    },
+    // external widget
+    {
+      class: MenuWidgetComponent,
+      data: {
+        label: 'test widget'
+      }
     }
   ];
   // define here your logo
@@ -93,6 +101,7 @@ export class AppComponent implements OnInit {
   public ngOnInit() {
     // define menu
     this.menuServ.setCurrent(this.mylinks);
+
     this.footerServ.setCurrent(this.footer);
     this.logoServ.setCurrent(this.logo);
 

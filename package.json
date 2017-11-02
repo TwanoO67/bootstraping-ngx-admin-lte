@@ -1,7 +1,7 @@
 {
   "name": "bootstraping-ngx-admin-lte",
-  "version": "0.5.1",
-  "license": "WTFPL",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
