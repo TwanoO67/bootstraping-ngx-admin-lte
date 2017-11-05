@@ -25,12 +25,14 @@ const pages = [
 // main bootstrap
 import { routing } from './app.routes';
 import { MenuWidgetComponent } from './widgets/menu-widget/menu-widget.component';
+import { HeaderWidgetComponent } from './widgets/header-widget/header-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ...pages,
-    MenuWidgetComponent
+    MenuWidgetComponent,
+    HeaderWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { MenuWidgetComponent } from './widgets/menu-widget/menu-widget.component
     AppComponent
   ],
   entryComponents: [
-    MenuWidgetComponent
+    MenuWidgetComponent,
+    HeaderWidgetComponent
   ]
 })
 export class AppModule { }

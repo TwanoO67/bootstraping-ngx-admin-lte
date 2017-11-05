@@ -1,10 +1,10 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-menu-widget',
-  templateUrl: './menu-widget.component.html'
+  selector: 'app-header-widget',
+  templateUrl: './header-widget.component.html'
 })
-export class MenuWidgetComponent implements OnInit, OnChanges {
+export class HeaderWidgetComponent implements OnInit, OnChanges {
   public label = '';
 
   constructor() { }

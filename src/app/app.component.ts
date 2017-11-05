@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
     {
       class: MenuWidgetComponent,
       data: {
-        label: 'test widget'
+        label: 'test component'
       }
     }
   ];

@@ -10,6 +10,7 @@ import { PageNumComponent } from './pages/page-num/page-num.component';
 
 // Components
 import { AppComponent } from './app.component';
+import { HeaderWidgetComponent } from './widgets/header-widget/header-widget.component';
 
 const routes: Routes = [
   // logged routes
@@ -35,7 +36,13 @@ const routes: Routes = [
     component: LayoutAuthComponent,
     data: [{
       'skin': 'skin-black',
-      'display_tasks': false
+      'display_tasks': false,
+      'header_components': [{
+        class: HeaderWidgetComponent,
+        data: {
+          label: 'test widget'
+        }
+      }]
     }],
     path: '',
   },
