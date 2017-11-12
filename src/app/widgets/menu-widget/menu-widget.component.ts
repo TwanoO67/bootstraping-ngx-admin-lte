@@ -16,4 +16,8 @@ export class MenuWidgetComponent implements OnInit, OnChanges {
   ngOnChanges() {
   }
 
+  public clic(){
+    alert('this is an external component');
+  }
+
 }
