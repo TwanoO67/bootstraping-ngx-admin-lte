@@ -29,6 +29,9 @@ export class AppComponent implements OnInit {
   // define here your own links menu structure
   private mylinks: any = [
     {
+      'header': 'NAVIGATION TITLE'
+    },
+    {
       'title': 'Home',
       'icon': 'dashboard',
       'link': ['/']
