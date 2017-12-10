@@ -3312,9 +3312,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-ngx-admin-lte@0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/ngx-admin-lte/-/ngx-admin-lte-0.6.3.tgz#a0699b1a9d1b2eae28840e1ea2732d5feac99849"
+ngx-admin-lte@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-admin-lte/-/ngx-admin-lte-1.0.0.tgz#fe7445e24402184eda31a87b72bf09ba276e0529"
   dependencies:
     "@angular/animations" "^4.4.6"
     "@angular/common" "^4.4.4"
