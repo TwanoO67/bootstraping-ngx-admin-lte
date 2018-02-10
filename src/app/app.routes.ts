@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CanActivateGuard, LayoutAuthComponent, LayoutLoginComponent, LayoutRegisterComponent } from 'ngx-admin-lte';
 
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { PageNumComponent } from './page-num/page-num.component';
 
 // Components
 import { AppComponent } from './app.component';

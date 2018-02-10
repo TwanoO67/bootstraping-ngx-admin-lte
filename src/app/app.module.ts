@@ -10,10 +10,10 @@ import { AppComponent } from './app.component';
 import { NgxAdminLteModule } from 'ngx-admin-lte';
 
 // les pages
-import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { HomeComponent } from './home/home.component';
+import { PageNumComponent } from './page-num/page-num.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const pages = [
     HomeComponent,
