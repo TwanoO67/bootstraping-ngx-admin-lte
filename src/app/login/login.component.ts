@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     window.dispatchEvent( new Event( 'resize' ) );
   }
 
-  private login() {
+  public login() {
 
     // test les champs en js
 
