@@ -3,10 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { CanActivateGuard, LayoutAuthComponent, LayoutLoginComponent, LayoutRegisterComponent } from 'ngx-admin-lte';
 
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
+import { LoginComponent } from './login/login.component';
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,17 +16,17 @@ const routes: Routes = [
     children: [
       {
         canActivate: [CanActivateGuard],
-        component: HomeComponent,
+        loadChildren: './home/home.module#HomeModule',
         path: ''
       },
       {
         canActivate: [CanActivateGuard],
-        component: HomeComponent,
+        loadChildren: './home/home.module#HomeModule',
         path: 'home'
       },
       {
         canActivate: [CanActivateGuard],
-        component: PageNumComponent,
+        loadChildren: './page-num/page-num.module#PageNumModule',
         path: 'page/:id'
       },
     ],
@@ -60,7 +57,7 @@ const routes: Routes = [
   {
     children: [
       {
-        component: RegisterComponent,
+        loadChildren: './register/register.module#RegisterModule',
         path: ''
       }
     ],
