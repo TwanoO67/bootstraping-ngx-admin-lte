@@ -16,4 +16,8 @@ export class HeaderWidgetComponent implements OnInit, OnChanges {
   ngOnChanges() {
   }
 
+  public clic(){
+    alert('this is an extra menu component');
+  }
+
 }
