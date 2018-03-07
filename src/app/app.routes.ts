@@ -24,6 +24,24 @@ const routes: Routes = [
         loadChildren: './home/home.module#HomeModule',
         path: 'home'
       },
+    ],
+    component: LayoutAuthComponent,
+    data: [{
+      'skin': 'skin-black',
+      'display_tasks': false,
+      'header_components': [{
+        class: HeaderWidgetComponent,
+        data: {
+          label: 'test widget'
+        }
+      }]
+    }],
+    path: '',
+  },
+  //route with no boxed_style layout
+  {
+    canActivate: [CanActivateGuard],
+    children: [
       {
         canActivate: [CanActivateGuard],
         loadChildren: './page-num/page-num.module#PageNumModule',
@@ -33,6 +51,7 @@ const routes: Routes = [
     component: LayoutAuthComponent,
     data: [{
       'skin': 'skin-black',
+      'boxed_style': false,
       'display_tasks': false,
       'header_components': [{
         class: HeaderWidgetComponent,
