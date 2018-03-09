@@ -1,27 +1,72 @@
-# BootstrappingNgxAdminLte
+# bootstraping ngx-admin-lte
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0-beta.4.
+[![Join the chat at https://gitter.im/TwanoO67/ng2-admin-lte](https://badges.gitter.im/TwanoO67/ng2-admin-lte.svg)](https://gitter.im/TwanoO67/ng2-admin-lte?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/TwanoO67/ng2-admin-lte.svg?branch=master)](https://travis-ci.org/TwanoO67/ng2-admin-lte)
 
-## Development server
+Bootstraping of Angular4 with AdminLTE dashboard template
+( Using ngx-admin-lte Library)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
 
-## Code scaffolding
+## UPDATE !
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This version use the new npm package ngx-admin-lte (this will be easier to update)
+If your are looking for the old version for angular check the "angular2" branch.
 
-## Build
+There's now two different repo:
+* [bootstraping-ngx-admin-lte](https://github.com/TwanoO67/bootstraping-ngx-admin-lte) For those who want the full bootstraping
+* [ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte) For whom want to install via npm in a existing project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Support
+Hey dude! Help me out for a couple of :beers:!
 
-## Running unit tests
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ghostsmaker@hotmail.com&lc=US&item_name=TwanoO67&item_number=ng2-admin-lte&no_note=0&currency_code=EUR)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Launching with docker
 
-## Running end-to-end tests
+```
+./bin/start.sh
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Building with docker
 
-## Further help
+```
+./bin/prod.sh
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Lauching with node > 7 locally installed
+
+```
+npm install -g yarn
+yarn
+yarn start
+```
+
+## Developpement
+
+
+For the feature on the Admin_LTE template, see the readme of this repo:
+[https://github.com/TwanoO67/ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte)
+
+Adding a component
+
+```
+cd src/app/widgets/
+yarn ng g component my-new-widget
+```
+
+Adding a page
+
+```
+cd src/app/pages/
+yarn ng g component my-new-page
+```
+
+Adding a service
+
+```
+cd src/app/services/
+yarn ng g service my-new-service
+```
+
+
