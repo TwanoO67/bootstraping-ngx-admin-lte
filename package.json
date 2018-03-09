@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "ng serve --host 0.0.0.0",
+    "prod": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -27,7 +27,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~6.0.0-beta.4",
+    "@angular/cli": "~6.0.0-beta.5",
     "@angular/compiler-cli": "^6.0.0-beta.7",
     "@angular/language-service": "^6.0.0-beta.7",
     "@types/jasmine": "~2.8.6",
