@@ -1,14 +1,14 @@
-import { NgxAdminLtePage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('ngx-admin-lte App', () => {
-  let page: NgxAdminLtePage;
+describe('bootstrapping-ngx-admin-lte App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new NgxAdminLtePage();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

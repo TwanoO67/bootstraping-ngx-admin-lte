@@ -3,19 +3,21 @@
 [![Join the chat at https://gitter.im/TwanoO67/ng2-admin-lte](https://badges.gitter.im/TwanoO67/ng2-admin-lte.svg)](https://gitter.im/TwanoO67/ng2-admin-lte?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/TwanoO67/ng2-admin-lte.svg?branch=master)](https://travis-ci.org/TwanoO67/ng2-admin-lte)
 
-Bootstraping of Angular4 with AdminLTE dashboard template
+Bootstraping of Angular6 with AdminLTE dashboard template
 ( Using ngx-admin-lte Library)
 
 ![Preview](https://almsaeedstudio.com/img/AdminLTE2.1.png)
 
-## UPDATE !
-
-This version use the new npm package ngx-admin-lte (this will be easier to update)
-If your are looking for the old version for angular check the "angular2" branch.
-
 There's now two different repo:
 * [bootstraping-ngx-admin-lte](https://github.com/TwanoO67/bootstraping-ngx-admin-lte) For those who want the full bootstraping
 * [ngx-admin-lte](https://github.com/TwanoO67/ngx-admin-lte) For whom want to install via npm in a existing project
+
+## UPDATE - Angular 6 BETA !
+
+This version now use the new angular6.0.0-beta.7 !
+And the related ngx-admin-lte beta package.
+
+If your are looking for the old version check the "angular2", and "angular4" tags.
 
 ## Support
 Hey dude! Help me out for a couple of :beers:!
@@ -68,5 +70,3 @@ Adding a service
 cd src/app/services/
 yarn ng g service my-new-service
 ```
-
-
