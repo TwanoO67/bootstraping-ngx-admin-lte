@@ -38,7 +38,7 @@ const routes: Routes = [
     }],
     path: '',
   },
-  //route with no boxed_style layout
+  // route with no boxed_style layout
   {
     canActivate: [CanActivateGuard],
     children: [
