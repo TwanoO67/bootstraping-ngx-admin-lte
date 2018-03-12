@@ -5,6 +5,7 @@
   "scripts": {
     "start": "ng serve --host 0.0.0.0",
     "prod": "ng build --prod",
+    "aot": "ng build --environment prod --build-optimizer --aot",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
