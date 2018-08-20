@@ -42,7 +42,7 @@ yarn
 yarn start
 ```
 
-## Developpement
+## Development
 
 
 For the feature on the Admin_LTE template, see the readme of this repo:
